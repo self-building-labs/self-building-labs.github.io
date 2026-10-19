@@ -1,0 +1,9 @@
+.DS_Store
+node_modules/
+artifacts/
+__pycache__/
+*.MOV
+*.mov
+*.mp4
+!self-building-labs-v8.mp4
+!sbl_full_web_corrected.mp4

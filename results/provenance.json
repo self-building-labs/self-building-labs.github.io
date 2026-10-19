@@ -1,0 +1,10 @@
+{
+  "experiment": "jiaru-CdS-thiourea01",
+  "source_file": "Plate spectra \u00b7 jiaru-CdS-thiourea01.html",
+  "source_sha256": "9a6324b53244467769fe6d2bf0cf77b7e801c4040b3bcea18a89e1b2031c054a",
+  "emission_nm": 560,
+  "excitation_nm": 360.0,
+  "extraction": "Raw 560 nm fluorescence values, exclusion flags, and incubator records. No averaging or normalization.",
+  "source_html_reused": false,
+  "network_access": false
+}

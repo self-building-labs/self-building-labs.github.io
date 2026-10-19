@@ -1,0 +1,31 @@
+import {pathToFileURL} from 'node:url';
+import {resolve} from 'node:path';
+import {mkdirSync} from 'node:fs';
+mkdirSync('artifacts',{recursive:true});
+import {chromium} from 'playwright';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+const metadata=JSON.parse(fs.readFileSync('source/assets/latest-workflow.json','utf8'));
+const b=await chromium.launch({executablePath:'/usr/bin/google-chrome',args:['--no-sandbox','--use-angle=swiftshader','--enable-unsafe-swiftshader']});
+try{
+const p=await b.newPage({viewport:{width:1100,height:900},reducedMotion:'reduce'});const errors=[];p.on('pageerror',e=>errors.push(e.message));
+await p.goto(pathToFileURL(resolve('xarm-workflow.html')).href);
+await p.waitForFunction(()=>!!window.sclViewer,null,{timeout:120000});
+assert.equal(await p.evaluate(()=>sclViewer.opentronsRun),'cds-screen-20261013-02');
+assert.equal(await p.locator('#timeline').getAttribute('min'),'0');
+assert.equal(await p.locator('[data-stage=ot2]').isEnabled(),true);
+await p.locator('#timeline').fill('20');const a=await p.evaluate(()=>sclViewer.pipettePosition);
+await p.locator('#timeline').fill('100');const c=await p.evaluate(()=>sclViewer.pipettePosition);
+assert.ok(Math.hypot(...a.map((v,i)=>v-c[i]))>.01,'Pipette geometry must move between recorded operations');
+await p.locator('[data-stage=ot2]').click();await p.waitForFunction(()=>sclViewer.playing&&sclViewer.time>0&&sclViewer.time<15);
+assert.equal(await p.evaluate(()=>sclViewer.currentView),'ot2');
+assert.equal(await p.evaluate(()=>sclViewer.opentronsVisible),true);
+await p.locator('#timeline').fill('100');await p.locator('#viewer-shell').screenshot({path:'artifacts/opentrons-new-replay.png'});
+await p.locator('[data-stage=xarm]').click();await p.waitForFunction(t=>sclViewer.playing&&sclViewer.time>t,metadata.opentrons.run_duration_s);
+assert.equal(await p.evaluate(()=>sclViewer.currentView),'xarm');
+assert.equal(await p.evaluate(()=>sclViewer.opentronsVisible),false);
+await p.locator('#timeline').fill('1280');await p.locator('#viewer-shell').screenshot({path:'artifacts/quantum-dot-xarm-retained.png'});
+await p.locator('[data-stage=ot2]').click();assert.equal(await p.evaluate(()=>sclViewer.opentronsVisible),true);
+await p.setViewportSize({width:390,height:844});assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
+assert.deepEqual(errors,[]);console.log('PASS: supplied second-run scene, moving pipette geometry, both stage buttons seek/change camera/play, xArm retained, mobile layout, no JavaScript errors');
+}finally{await b.close();}

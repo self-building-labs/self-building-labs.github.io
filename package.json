@@ -1,0 +1,18 @@
+{
+  "name": "self-building-lab-website",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-standalone.mjs",
+    "check": "node --check source/app.js && node --check source/viewer.js && node --check source/latest-app.js && node --check source/latest-viewer.js && node --check source/rendering.js && node --check source/fluorescence.js",
+    "check:results": "node scripts/check-results.mjs",
+    "check:publish": "node scripts/check-publish.mjs"
+  },
+  "dependencies": {
+    "three": "0.180.0"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.11",
+    "playwright": "1.56.1"
+  }
+}

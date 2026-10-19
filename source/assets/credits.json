@@ -1,0 +1,78 @@
+{
+  "project": "Self-Building Labs",
+  "assets": [
+    {
+      "asset": "workflow.glb",
+      "source": "/home/safety_agent/code/akg4pyscf-twin-preview/experiments/mobile_lab/outputs/vial_tip_revision/scene.usdc",
+      "source_sha256": "f1477a73dc116857794f42c2170c22db6ffe0ae7e24e48c996b2f55f262e5eaa",
+      "description": "Complete 989-second recorded six-vial workflow with revised UR handover, mobile transport, xArm loading, six fresh-tip exchanges, and shaker loading and motion. Source CAD retained; permanently hidden branches omitted.",
+      "scope": "Sampled geometry checks supplied with the source revision; not continuous-time or force validation."
+    },
+    {
+      "asset": "latest-workflow.glb",
+      "description": "Film scene with baked xArm replay and endpoint-driven Opentrons motion; full CAD detail retained, Draco compressed.",
+      "scope": "Saved xArm joints; inferred custody and device travel. OT2 command endpoints with illustrative raised transfers; no continuous OT2 telemetry. Browser lighting approximates the film dome and distant key.",
+      "sources": {
+        "scene": {
+          "file": "xarm-contact-fit.usda",
+          "sha256": "1af9b0ac02829787900505c0054a6adbd81f85de5a39eeda7f4cb0852ec41b84"
+        },
+        "xarm_timeline": {
+          "file": "timeline.json",
+          "sha256": "336089b690b5df57a1b9ebb466af98ad84bd8efa52ff4f044f7479baef38517b"
+        },
+        "ot2_endpoints": {
+          "file": "liquid-timeline.jsonl",
+          "sha256": "37cf37b5ccaf806384b2a444bf7709d47cbc046838a548e89b1e9ad0893884cb"
+        },
+        "film_render": {
+          "file": "render_film.py",
+          "sha256": "8f8bfa716910e20ce97ce1f3f4bd80c274e5e66a1caaa6a9f4d41fcd38a7ff9b"
+        }
+      },
+      "lighting": {
+        "reference": "self-building-lab-film-v3",
+        "dome_color": [
+          0.9,
+          0.95,
+          1.0
+        ],
+        "usd_dome_intensity": 2600,
+        "usd_key_intensity": 2600,
+        "usd_key_angle_deg": 12,
+        "usd_key_rotation_xyz_deg": [
+          -35,
+          -20,
+          -25
+        ],
+        "browser": "Approximation using environment lighting and soft directional shadows; no Isaac ray tracing"
+      }
+    },
+    {
+      "asset": "opentrons-replay.glb",
+      "source": "Desktop/sbl/opentrons-cds-screen-20261013-02-isaac-replay.zip",
+      "description": "Completed second-run command endpoints, nominal tip-handling poses, reconstructed raised transfers, eight-channel tip inventory and conserved nominal liquid volumes. Canonical laboratory geometry and reconstructed tip/trash assets supplied by lab-digital-twin.",
+      "scope": "No continuous telemetry, physical volume measurement, or within-mix trajectory; xArm animation is a separate source."
+    },
+    {
+      "asset": "self-building-labs-v8.mp4",
+      "description": "User-provided final paper video; preserved at original quality."
+    }
+  ],
+  "geometry_sources": [
+    {
+      "name": "Universal Robots ROS2 description",
+      "url": "https://github.com/UniversalRobots/Universal_Robots_ROS2_Description"
+    },
+    {
+      "name": "Robotiq ROS-Industrial",
+      "url": "https://github.com/ros-industrial/robotiq"
+    },
+    {
+      "name": "Galaxea R1 Pro",
+      "note": "Manufacturer assets retained in the mobile_lab experiment; see original asset provenance."
+    }
+  ],
+  "renderer": "Three.js (MIT); license included in licenses/THREE-LICENSE.txt",
+  "presentation": "Both viewers use studio environment lighting, AgX, screen-space contact occlusion, soft shadows, and crease-aware CAD normals. No hardware connections."
+}
