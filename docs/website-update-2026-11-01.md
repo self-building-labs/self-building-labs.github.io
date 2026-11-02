@@ -85,3 +85,26 @@ two workflows passed shaded-geometry, playback, and mobile-layout checks without
 JavaScript errors. `npm run check:cache` confirmed browser disk-cache reuse across
 pages for the hood, geometry, a texture, a font, and a shared JavaScript module.
 Nothing was committed or pushed.
+
+## HPLC drawer-opening transform correction
+
+The two user-designated workflows are identical: `hplc-video-20261030-twin-v6-input/workflow.json`
+and `hplc-controller-export-20261028/outputs/hplc-speedup-20261028/retime-v2-20261029/delivery/workflow.json`
+both hash to `13f654af7a182a2bcd7f7c0c40b2dab9a819925fd19ce90485eb72c29d7ccda2`.
+The replay source was correct, but the Blender USD import lost `resetXformStack`
+semantics on nine robot nodes. Their world-space transforms inherited the robot
+parent's approximately -20 mm vertical installation offset a second time, placing
+the arm and fingers below their intended positions relative to the HPLC drawer.
+
+`scripts/fix-hplc-transforms.py` restores those nodes as scene roots, retaining the
+static base hierarchy and copying geometry, textures, and animation buffers
+verbatim. `scripts/check-hplc-source-motion.py` compares all 4,173 exported 5 Hz
+frames with calibrated FK and saved plate/drawer transforms from the authoritative
+inputs. Maximum position error after correction is below 0.001 mm. This verifies
+export fidelity at saved frames; it does not add physical or continuous-time
+collision qualification. The source trajectory and current lighting/hood remain
+unchanged.
+
+Run the source comparison using the local CUDA/pxr environment:
+`/home/safety_agent/venvs/curobo-performance/bin/python scripts/check-hplc-source-motion.py`.
+The `HPLC_INPUT` and `HPLC_DELIVERY` environment variables can override source paths.

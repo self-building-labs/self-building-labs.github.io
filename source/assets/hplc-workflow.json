@@ -166,7 +166,7 @@
   "source_scene_sha256": "d3513e13ef0ba27970356a18546901473e94a67470e1c8e79e01cd52a5c5f710",
   "sample_rate_hz": 5,
   "description": "Kinematic replay of the saved HPLC workflow; no physical execution or new planning.",
-  "model_sha256": "61ebc7421bbb7f5f466c7b9e5ebc12c49933e2686ddaa9c08d0bf1c45edc1a26",
+  "model_sha256": "661b1bf7d7bc34e27f13a7d49e568feab885fabfa774f9055cab0eed5341d8a3",
   "source_workflow": "hplc-video-20261030-twin-v6-input/workflow.json",
   "source_rendered_scene": "hplc-video-20261030-twin-v6-native/initial-scene.usdc",
   "export": "Saved 5 Hz state samples; calibrated forward kinematics; authored world transforms for robot, fingers, plates and drawer; Blender USD to glTF with Draco geometry compression.",
@@ -191,6 +191,22 @@
       "PlateLoc_screen_snapshot",
       "Photographic_EchoTherm_fascia",
       "Waters_photo_fascia"
+    ]
+  },
+  "source_controller_workflow": "hplc-controller-export-20261028/outputs/hplc-speedup-20261028/retime-v2-20261029/delivery/workflow.json",
+  "transform_correction": {
+    "reason": "USD world-space robot parts incorrectly inherited the parent -20 mm vertical installation offset during Blender import.",
+    "method": "Restore resetXformStack by making nine world-space robot nodes glTF scene roots; preserve static base hierarchy and all binary geometry/animation data.",
+    "nodes": [
+      "carriage",
+      "ft_tool",
+      "left_finger.001",
+      "link1",
+      "link2",
+      "link3",
+      "link4",
+      "link5",
+      "right_finger.001"
     ]
   }
 }
