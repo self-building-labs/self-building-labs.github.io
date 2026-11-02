@@ -1,0 +1,86 @@
+{
+  "videos": [
+    {
+      "source_filename": "hplc-self-building-lab-revised.mp4",
+      "source_sha256": "ad8a25e20da2bfdee9d178e8926d85e40d3a5e84dd3bced70201bc93560ba872",
+      "file": "media/hplc.mp4",
+      "sha256": "f64bd20514974557707f7183cd509502ec17f065c701aad931bceb650857d345",
+      "source_bytes": 72178248,
+      "output_bytes": 53313704,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "fps": 30,
+      "video_encoder": "libx264",
+      "preset": "slow",
+      "crf": 20,
+      "audio": "copied without re-encoding",
+      "faststart": true,
+      "quality_method": "libvmaf, one frame per second across full source and encode; score is relative to supplied source, not a lossless claim",
+      "vmaf": {
+        "min": 96.038745,
+        "max": 100.0,
+        "mean": 99.24739,
+        "harmonic_mean": 99.234611
+      }
+    },
+    {
+      "source_filename": "robochem-flex-revision-8.mp4",
+      "source_sha256": "db482bbad046f49008ed81554664b528c232edd4c53e4c73605658261fe95f58",
+      "file": "media/robochem-flex.mp4",
+      "sha256": "72e43b996a26483b863d11615f905107129a1a2eab1ca131960e7439ee89a8c8",
+      "source_bytes": 47852303,
+      "output_bytes": 36311867,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "fps": 30,
+      "video_encoder": "libx264",
+      "preset": "slow",
+      "crf": 20,
+      "audio": "copied without re-encoding",
+      "faststart": true,
+      "quality_method": "libvmaf, one frame per second across full source and encode; score is relative to supplied source, not a lossless claim",
+      "vmaf": {
+        "min": 96.379526,
+        "max": 100.0,
+        "mean": 98.75236,
+        "harmonic_mean": 98.731767
+      }
+    },
+    {
+      "source_filename": "sbl_youtube/self-building-labs-episode-1-layout-b.mp4",
+      "source_sha256": "f71fb7de24bdafb189ac0a993aae4876bc99980bc22e4effb4b9346c7de87679",
+      "file": "self-building-labs-episode-1.mp4",
+      "sha256": "aa520bde027b69eabde3784d810f869fb28c68d67766c317d62a540f1840d2bf",
+      "source_bytes": 106703670,
+      "output_bytes": 50015431,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "fps": 30,
+      "duration_s": 151,
+      "video_encoder": "libx264",
+      "preset": "slow",
+      "crf": 20,
+      "audio": "copied without re-encoding",
+      "captions": "Source mov_text preserved; also extracted to media/episode-1-en.vtt for browser caption controls",
+      "faststart": true,
+      "quality_method": "libvmaf, one frame per second across full source and encode; relative to supplied source, not lossless",
+      "vmaf": {
+        "min": 95.96597,
+        "max": 100.0,
+        "mean": 98.643629,
+        "harmonic_mean": 98.623584
+      }
+    }
+  ],
+  "posters": "Extracted from supplied videos: Episode 1 layout-b at 55s, HPLC at 90s, RoboChem-Flex at 45s.",
+  "paper": {
+    "source_filename": "sbl-arxiv-v2-view.pdf",
+    "sha256": "54c57c8ea44dae9486f44c0f53d0f1baa07cf46f8ff2de2d00ea71fec913850d"
+  }
+}

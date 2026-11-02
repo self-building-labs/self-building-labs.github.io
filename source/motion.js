@@ -12,7 +12,7 @@ export function animateElement(element,keyframes,options={}){
 }
 export function enterPanel(element){animateElement(element,[{opacity:.35,transform:'translateY(8px)'},{opacity:1,transform:'translateY(0)'}],{duration:280});}
 export function initPageMotion(){
- const elements=document.querySelectorAll('.story-heading,.section-heading,.concept-steps>li,.capability-details>article,.starting-points-grid>article,.outlook-section h2,.outlook-grid>article,.closing-section .section-wrap,.paradigm-comparison');
+ const elements=document.querySelectorAll('.hero-film');
  if(!('IntersectionObserver' in window))return;
  const observer=new IntersectionObserver(entries=>{
   for(const entry of entries){if(!entry.isIntersecting)continue;observer.unobserve(entry.target);animateElement(entry.target,[{opacity:0,transform:'translateY(14px)'},{opacity:1,transform:'translateY(0)'}],{duration:480});}

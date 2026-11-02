@@ -11,7 +11,7 @@ for(const name of new Set(files)){
  assert.ok(bytes<=100*1024*1024,`${name} exceeds GitHub's 100 MiB file limit`);
 }
 let references=0;
-for(const name of ['index.html','xarm-workflow.html']){
+for(const name of ['index.html','xarm-workflow.html','hplc-workflow.html']){
  const html=fs.readFileSync(path.join(root,name),'utf8').split('<script>window.SCL_ASSETS=')[0];
  for(const match of html.matchAll(/(?:src|href|poster|data-src)="([^"]+)"/g)){
   const ref=match[1];if(/^(?:[a-z][a-z\d+.-]*:|#|\/\/)/i.test(ref))continue;
@@ -19,5 +19,5 @@ for(const name of ['index.html','xarm-workflow.html']){
  }
 }
 assert.ok(total<1e9,'Repository working files exceed the 1 GB Pages site limit');
-for(const name of ['self-building-labs-v8.mp4','sbl_full_web_corrected.mp4'])assert.ok(files.includes(name),`${name} is excluded from Git`);
+for(const name of ['self-building-labs-episode-1.mp4','sbl_full_web_corrected.mp4','media/hplc.mp4','media/robochem-flex.mp4'])assert.ok(files.includes(name),`${name} is excluded from Git`);
 console.log(JSON.stringify({passed:true,localReferences:references,workingFilesMB:+(total/1e6).toFixed(1),largestFile:max.name,largestFileMB:+(max.bytes/1e6).toFixed(1)},null,2));

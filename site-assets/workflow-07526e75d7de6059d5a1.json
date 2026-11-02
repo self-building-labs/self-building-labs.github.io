@@ -1,0 +1,2768 @@
+{
+  "id": "six-vial-stock-solution",
+  "title": "Six-vial stock solution preparation",
+  "mode": "offline_simulation",
+  "recipe": {
+    "solid_mg": 10.0,
+    "buffer_ul": 1000.0,
+    "shake_s": 60.0,
+    "shake_rpm": 300.0
+  },
+  "vials": [
+    {
+      "id": "V01",
+      "rack_xy_m": [
+        -0.022,
+        -0.022
+      ],
+      "source_slot": [
+        3,
+        0
+      ]
+    },
+    {
+      "id": "V02",
+      "rack_xy_m": [
+        -0.022,
+        0.022
+      ],
+      "source_slot": [
+        2,
+        0
+      ]
+    },
+    {
+      "id": "V03",
+      "rack_xy_m": [
+        0.0,
+        -0.022
+      ],
+      "source_slot": [
+        3,
+        2
+      ]
+    },
+    {
+      "id": "V04",
+      "rack_xy_m": [
+        0.0,
+        0.022
+      ],
+      "source_slot": [
+        2,
+        2
+      ]
+    },
+    {
+      "id": "V05",
+      "rack_xy_m": [
+        0.022,
+        -0.022
+      ],
+      "source_slot": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "V06",
+      "rack_xy_m": [
+        0.022,
+        0.022
+      ],
+      "source_slot": [
+        2,
+        4
+      ]
+    }
+  ],
+  "recipe_status": "Illustrative demo values; solid and buffer identities unspecified",
+  "initial_state": "Six open empty vials; empty rack; buffer and fresh tips preloaded",
+  "steps": [
+    {
+      "id": "S001",
+      "action": "ur3_pick_vial",
+      "evidence": "simulated",
+      "vial": "V01"
+    },
+    {
+      "id": "S002",
+      "action": "ur3_place_in_dispenser",
+      "evidence": "simulated",
+      "vial": "V01"
+    },
+    {
+      "id": "S003",
+      "action": "dose_solid",
+      "evidence": "simulated",
+      "vial": "V01",
+      "mass_mg": 10.0
+    },
+    {
+      "id": "S004",
+      "action": "ur3_retrieve_dosed_vial",
+      "evidence": "simulated",
+      "vial": "V01"
+    },
+    {
+      "id": "S005",
+      "action": "ur3_place_vial_in_rack",
+      "evidence": "simulated",
+      "vial": "V01"
+    },
+    {
+      "id": "S006",
+      "action": "ur3_pick_vial",
+      "evidence": "simulated",
+      "vial": "V02"
+    },
+    {
+      "id": "S007",
+      "action": "ur3_place_in_dispenser",
+      "evidence": "simulated",
+      "vial": "V02"
+    },
+    {
+      "id": "S008",
+      "action": "dose_solid",
+      "evidence": "simulated",
+      "vial": "V02",
+      "mass_mg": 10.0
+    },
+    {
+      "id": "S009",
+      "action": "ur3_retrieve_dosed_vial",
+      "evidence": "simulated",
+      "vial": "V02"
+    },
+    {
+      "id": "S010",
+      "action": "ur3_place_vial_in_rack",
+      "evidence": "simulated",
+      "vial": "V02"
+    },
+    {
+      "id": "S011",
+      "action": "ur3_pick_vial",
+      "evidence": "simulated",
+      "vial": "V03"
+    },
+    {
+      "id": "S012",
+      "action": "ur3_place_in_dispenser",
+      "evidence": "simulated",
+      "vial": "V03"
+    },
+    {
+      "id": "S013",
+      "action": "dose_solid",
+      "evidence": "simulated",
+      "vial": "V03",
+      "mass_mg": 10.0
+    },
+    {
+      "id": "S014",
+      "action": "ur3_retrieve_dosed_vial",
+      "evidence": "simulated",
+      "vial": "V03"
+    },
+    {
+      "id": "S015",
+      "action": "ur3_place_vial_in_rack",
+      "evidence": "simulated",
+      "vial": "V03"
+    },
+    {
+      "id": "S016",
+      "action": "ur3_pick_vial",
+      "evidence": "simulated",
+      "vial": "V04"
+    },
+    {
+      "id": "S017",
+      "action": "ur3_place_in_dispenser",
+      "evidence": "simulated",
+      "vial": "V04"
+    },
+    {
+      "id": "S018",
+      "action": "dose_solid",
+      "evidence": "simulated",
+      "vial": "V04",
+      "mass_mg": 10.0
+    },
+    {
+      "id": "S019",
+      "action": "ur3_retrieve_dosed_vial",
+      "evidence": "simulated",
+      "vial": "V04"
+    },
+    {
+      "id": "S020",
+      "action": "ur3_place_vial_in_rack",
+      "evidence": "simulated",
+      "vial": "V04"
+    },
+    {
+      "id": "S021",
+      "action": "ur3_pick_vial",
+      "evidence": "simulated",
+      "vial": "V05"
+    },
+    {
+      "id": "S022",
+      "action": "ur3_place_in_dispenser",
+      "evidence": "simulated",
+      "vial": "V05"
+    },
+    {
+      "id": "S023",
+      "action": "dose_solid",
+      "evidence": "simulated",
+      "vial": "V05",
+      "mass_mg": 10.0
+    },
+    {
+      "id": "S024",
+      "action": "ur3_retrieve_dosed_vial",
+      "evidence": "simulated",
+      "vial": "V05"
+    },
+    {
+      "id": "S025",
+      "action": "ur3_place_vial_in_rack",
+      "evidence": "simulated",
+      "vial": "V05"
+    },
+    {
+      "id": "S026",
+      "action": "ur3_pick_vial",
+      "evidence": "simulated",
+      "vial": "V06"
+    },
+    {
+      "id": "S027",
+      "action": "ur3_place_in_dispenser",
+      "evidence": "simulated",
+      "vial": "V06"
+    },
+    {
+      "id": "S028",
+      "action": "dose_solid",
+      "evidence": "simulated",
+      "vial": "V06",
+      "mass_mg": 10.0
+    },
+    {
+      "id": "S029",
+      "action": "ur3_retrieve_dosed_vial",
+      "evidence": "simulated",
+      "vial": "V06"
+    },
+    {
+      "id": "S030",
+      "action": "ur3_place_vial_in_rack",
+      "evidence": "simulated",
+      "vial": "V06"
+    },
+    {
+      "id": "S031",
+      "action": "ur3_pick_loaded_rack",
+      "evidence": "simulated"
+    },
+    {
+      "id": "S032",
+      "action": "ur5_grasp_rack",
+      "evidence": "simulated"
+    },
+    {
+      "id": "S033",
+      "action": "ur3_release_rack",
+      "evidence": "simulated"
+    },
+    {
+      "id": "S034",
+      "action": "ur5_place_rack_at_pickup",
+      "evidence": "simulated"
+    },
+    {
+      "id": "S035",
+      "action": "mobile_pick_rack",
+      "evidence": "simulated"
+    },
+    {
+      "id": "S036",
+      "action": "mobile_place_on_xarm_table",
+      "evidence": "simulated"
+    },
+    {
+      "id": "S037",
+      "action": "xarm_pick_rack",
+      "evidence": "simulated"
+    },
+    {
+      "id": "S038",
+      "action": "xarm_place_in_ot2",
+      "evidence": "simulated"
+    },
+    {
+      "id": "S039",
+      "action": "xarm_clear_ot2",
+      "evidence": "simulated"
+    },
+    {
+      "id": "S040",
+      "action": "add_buffer",
+      "evidence": "simulated",
+      "vial": "V01",
+      "volume_ul": 1000.0,
+      "source": "buffer_reservoir",
+      "tip": "tip_V01"
+    },
+    {
+      "id": "S041",
+      "action": "add_buffer",
+      "evidence": "simulated",
+      "vial": "V02",
+      "volume_ul": 1000.0,
+      "source": "buffer_reservoir",
+      "tip": "tip_V02"
+    },
+    {
+      "id": "S042",
+      "action": "add_buffer",
+      "evidence": "simulated",
+      "vial": "V03",
+      "volume_ul": 1000.0,
+      "source": "buffer_reservoir",
+      "tip": "tip_V03"
+    },
+    {
+      "id": "S043",
+      "action": "add_buffer",
+      "evidence": "simulated",
+      "vial": "V04",
+      "volume_ul": 1000.0,
+      "source": "buffer_reservoir",
+      "tip": "tip_V04"
+    },
+    {
+      "id": "S044",
+      "action": "add_buffer",
+      "evidence": "simulated",
+      "vial": "V05",
+      "volume_ul": 1000.0,
+      "source": "buffer_reservoir",
+      "tip": "tip_V05"
+    },
+    {
+      "id": "S045",
+      "action": "add_buffer",
+      "evidence": "simulated",
+      "vial": "V06",
+      "volume_ul": 1000.0,
+      "source": "buffer_reservoir",
+      "tip": "tip_V06"
+    },
+    {
+      "id": "S046",
+      "action": "ot2_park",
+      "evidence": "simulated"
+    },
+    {
+      "id": "S047",
+      "action": "xarm_retrieve_rack",
+      "evidence": "simulated"
+    },
+    {
+      "id": "S048",
+      "action": "xarm_place_on_shaker",
+      "evidence": "simulated"
+    },
+    {
+      "id": "S049",
+      "action": "xarm_clear_shaker",
+      "evidence": "simulated"
+    },
+    {
+      "id": "S050",
+      "action": "shake",
+      "evidence": "simulated",
+      "duration_s": 60.0,
+      "rpm": 300.0
+    },
+    {
+      "id": "S051",
+      "action": "stop_shaker",
+      "evidence": "simulated"
+    }
+  ],
+  "limitations": [
+    "Discrete visible-geometry checks; within-arm self collision and grasp forces are not validated. Door travel and loading lift are modeled estimates."
+  ],
+  "ur_plan_sha256": "a689d77431de7a3b68ec2eef1cb894d46a05a63207be4815f8eb5c5a3791aa52",
+  "duration_s": 989.0,
+  "phases": [
+    {
+      "name": "V01: approach source vial",
+      "start_s": 0.0,
+      "end_s": 3.0,
+      "camera": "detail_review_ur"
+    },
+    {
+      "name": "V01: grasp empty vial",
+      "start_s": 3.0000000000000013,
+      "end_s": 5.000000000000002,
+      "camera": "detail_review_ur"
+    },
+    {
+      "name": "V01: close on vial",
+      "start_s": 4.999999999999998,
+      "end_s": 5.999999999999998,
+      "camera": "detail_review_ur"
+    },
+    {
+      "name": "V01: lift source vial",
+      "start_s": 5.999999999999995,
+      "end_s": 8.999999999999995,
+      "camera": "detail_review_ur"
+    },
+    {
+      "name": "V01: approach openable side door",
+      "start_s": 8.999999999999984,
+      "end_s": 13.999999999999984,
+      "camera": "detail_review_ur"
+    },
+    {
+      "name": "V01: waiting outside shield",
+      "start_s": 13.999999999999966,
+      "end_s": 14.999999999999966,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V01: open side door",
+      "start_s": 14.999999999999966,
+      "end_s": 16.999999999999964,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V01: side entry",
+      "start_s": 16.999999999999964,
+      "end_s": 18.999999999999964,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V01: above red holder",
+      "start_s": 18.999999999999964,
+      "end_s": 20.999999999999964,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V01: seat vial on red holder",
+      "start_s": 20.999999999999964,
+      "end_s": 21.999999999999964,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V01: release vial",
+      "start_s": 21.999999999999964,
+      "end_s": 24.999999999999964,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V01: withdraw through side door",
+      "start_s": 24.999999999999964,
+      "end_s": 25.999999999999964,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V01: close side door",
+      "start_s": 25.999999999999964,
+      "end_s": 26.999999999999964,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V01: lower dosing head",
+      "start_s": 26.999999999999964,
+      "end_s": 27.999999999999964,
+      "camera": "detail_dosing_dose"
+    },
+    {
+      "name": "V01: dose",
+      "start_s": 27.999999999999964,
+      "end_s": 31.999999999999964,
+      "camera": "detail_dosing_dose"
+    },
+    {
+      "name": "V01: dose complete",
+      "start_s": 31.999999999999964,
+      "end_s": 32.999999999999964,
+      "camera": "detail_dosing_dose"
+    },
+    {
+      "name": "V01: raise head for retrieval",
+      "start_s": 32.999999999999964,
+      "end_s": 33.999999999999964,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V01: reopen side door",
+      "start_s": 33.999999999999964,
+      "end_s": 35.999999999999964,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V01: retrieve from red holder",
+      "start_s": 35.999999999999964,
+      "end_s": 36.999999999999964,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V01: grasp dosed vial",
+      "start_s": 36.999999999999964,
+      "end_s": 38.999999999999964,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V01: lift clear of red holder",
+      "start_s": 38.999999999999964,
+      "end_s": 40.999999999999964,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V01: withdraw vial through side door",
+      "start_s": 40.999999999999964,
+      "end_s": 41.999999999999964,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V01: clear dispenser toward rack",
+      "start_s": 41.999999999999964,
+      "end_s": 45.999999999999964,
+      "camera": "detail_review_ur"
+    },
+    {
+      "name": "V01: carry dosed vial to rack",
+      "start_s": 46.00000000000002,
+      "end_s": 50.00000000000002,
+      "camera": "detail_review_ur"
+    },
+    {
+      "name": "V01: place vial in rack",
+      "start_s": 50.00000000000008,
+      "end_s": 53.00000000000008,
+      "camera": "detail_review_ur"
+    },
+    {
+      "name": "V01: release vial",
+      "start_s": 53.00000000000012,
+      "end_s": 54.00000000000012,
+      "camera": "detail_review_ur"
+    },
+    {
+      "name": "V01: withdraw from rack",
+      "start_s": 54.000000000000135,
+      "end_s": 57.000000000000135,
+      "camera": "detail_review_ur"
+    },
+    {
+      "name": "V03: approach source vial",
+      "start_s": 57.00000000000018,
+      "end_s": 60.00000000000018,
+      "camera": "detail_review_ur"
+    },
+    {
+      "name": "V03: grasp empty vial",
+      "start_s": 60.00000000000022,
+      "end_s": 62.00000000000022,
+      "camera": "detail_review_ur"
+    },
+    {
+      "name": "V03: close on vial",
+      "start_s": 62.00000000000025,
+      "end_s": 63.00000000000025,
+      "camera": "detail_review_ur"
+    },
+    {
+      "name": "V03: lift source vial",
+      "start_s": 63.00000000000026,
+      "end_s": 66.00000000000026,
+      "camera": "detail_review_ur"
+    },
+    {
+      "name": "V03: approach openable side door",
+      "start_s": 66.00000000000016,
+      "end_s": 71.00000000000016,
+      "camera": "detail_review_ur"
+    },
+    {
+      "name": "V03: waiting outside shield",
+      "start_s": 70.99999999999987,
+      "end_s": 71.99999999999987,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V03: open side door",
+      "start_s": 71.99999999999987,
+      "end_s": 73.99999999999987,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V03: side entry",
+      "start_s": 73.99999999999987,
+      "end_s": 75.99999999999987,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V03: above red holder",
+      "start_s": 75.99999999999987,
+      "end_s": 77.99999999999987,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V03: seat vial on red holder",
+      "start_s": 77.99999999999987,
+      "end_s": 78.99999999999987,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V03: release vial",
+      "start_s": 78.99999999999987,
+      "end_s": 81.99999999999987,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V03: withdraw through side door",
+      "start_s": 81.99999999999987,
+      "end_s": 82.99999999999987,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V03: close side door",
+      "start_s": 82.99999999999987,
+      "end_s": 83.99999999999987,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V03: lower dosing head",
+      "start_s": 83.99999999999987,
+      "end_s": 84.99999999999987,
+      "camera": "detail_dosing_dose"
+    },
+    {
+      "name": "V03: dose",
+      "start_s": 84.99999999999987,
+      "end_s": 88.99999999999987,
+      "camera": "detail_dosing_dose"
+    },
+    {
+      "name": "V03: dose complete",
+      "start_s": 88.99999999999987,
+      "end_s": 89.99999999999987,
+      "camera": "detail_dosing_dose"
+    },
+    {
+      "name": "V03: raise head for retrieval",
+      "start_s": 89.99999999999987,
+      "end_s": 90.99999999999987,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V03: reopen side door",
+      "start_s": 90.99999999999987,
+      "end_s": 92.99999999999987,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V03: retrieve from red holder",
+      "start_s": 92.99999999999987,
+      "end_s": 93.99999999999987,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V03: grasp dosed vial",
+      "start_s": 93.99999999999987,
+      "end_s": 95.99999999999987,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V03: lift clear of red holder",
+      "start_s": 95.99999999999987,
+      "end_s": 97.99999999999987,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V03: withdraw vial through side door",
+      "start_s": 97.99999999999987,
+      "end_s": 98.99999999999987,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V03: clear dispenser toward rack",
+      "start_s": 98.99999999999987,
+      "end_s": 102.99999999999987,
+      "camera": "detail_review_ur"
+    },
+    {
+      "name": "V03: carry dosed vial to rack",
+      "start_s": 102.99999999999964,
+      "end_s": 106.99999999999964,
+      "camera": "detail_review_ur"
+    },
+    {
+      "name": "V03: place vial in rack",
+      "start_s": 106.99999999999942,
+      "end_s": 109.99999999999942,
+      "camera": "detail_review_ur"
+    },
+    {
+      "name": "V03: release vial",
+      "start_s": 109.99999999999925,
+      "end_s": 110.99999999999925,
+      "camera": "detail_review_ur"
+    },
+    {
+      "name": "V03: withdraw from rack",
+      "start_s": 110.99999999999919,
+      "end_s": 113.99999999999919,
+      "camera": "detail_review_ur"
+    },
+    {
+      "name": "V05: approach source vial",
+      "start_s": 113.99999999999902,
+      "end_s": 116.99999999999902,
+      "camera": "detail_review_ur"
+    },
+    {
+      "name": "V05: grasp empty vial",
+      "start_s": 116.99999999999885,
+      "end_s": 118.99999999999885,
+      "camera": "detail_review_ur"
+    },
+    {
+      "name": "V05: close on vial",
+      "start_s": 118.99999999999874,
+      "end_s": 119.99999999999874,
+      "camera": "detail_review_ur"
+    },
+    {
+      "name": "V05: lift source vial",
+      "start_s": 119.99999999999868,
+      "end_s": 122.99999999999868,
+      "camera": "detail_review_ur"
+    },
+    {
+      "name": "V05: approach openable side door",
+      "start_s": 122.99999999999851,
+      "end_s": 127.99999999999851,
+      "camera": "detail_review_ur"
+    },
+    {
+      "name": "V05: waiting outside shield",
+      "start_s": 127.99999999999822,
+      "end_s": 128.99999999999824,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V05: open side door",
+      "start_s": 128.99999999999824,
+      "end_s": 130.99999999999824,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V05: side entry",
+      "start_s": 130.99999999999824,
+      "end_s": 132.99999999999824,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V05: above red holder",
+      "start_s": 132.99999999999824,
+      "end_s": 134.99999999999824,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V05: seat vial on red holder",
+      "start_s": 134.99999999999824,
+      "end_s": 135.99999999999824,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V05: release vial",
+      "start_s": 135.99999999999824,
+      "end_s": 138.99999999999824,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V05: withdraw through side door",
+      "start_s": 138.99999999999824,
+      "end_s": 139.99999999999824,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V05: close side door",
+      "start_s": 139.99999999999824,
+      "end_s": 140.99999999999824,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V05: lower dosing head",
+      "start_s": 140.99999999999824,
+      "end_s": 141.99999999999824,
+      "camera": "detail_dosing_dose"
+    },
+    {
+      "name": "V05: dose",
+      "start_s": 141.99999999999824,
+      "end_s": 145.99999999999824,
+      "camera": "detail_dosing_dose"
+    },
+    {
+      "name": "V05: dose complete",
+      "start_s": 145.99999999999824,
+      "end_s": 146.99999999999824,
+      "camera": "detail_dosing_dose"
+    },
+    {
+      "name": "V05: raise head for retrieval",
+      "start_s": 146.99999999999824,
+      "end_s": 147.99999999999824,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V05: reopen side door",
+      "start_s": 147.99999999999824,
+      "end_s": 149.99999999999824,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V05: retrieve from red holder",
+      "start_s": 149.99999999999824,
+      "end_s": 150.99999999999824,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V05: grasp dosed vial",
+      "start_s": 150.99999999999824,
+      "end_s": 152.99999999999824,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V05: lift clear of red holder",
+      "start_s": 152.99999999999824,
+      "end_s": 154.99999999999824,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V05: withdraw vial through side door",
+      "start_s": 154.99999999999824,
+      "end_s": 155.99999999999824,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V05: clear dispenser toward rack",
+      "start_s": 155.99999999999824,
+      "end_s": 159.99999999999824,
+      "camera": "detail_review_ur"
+    },
+    {
+      "name": "V05: carry dosed vial to rack",
+      "start_s": 159.999999999998,
+      "end_s": 163.999999999998,
+      "camera": "detail_review_ur"
+    },
+    {
+      "name": "V05: place vial in rack",
+      "start_s": 163.99999999999778,
+      "end_s": 166.99999999999778,
+      "camera": "detail_review_ur"
+    },
+    {
+      "name": "V05: release vial",
+      "start_s": 166.9999999999976,
+      "end_s": 167.9999999999976,
+      "camera": "detail_review_ur"
+    },
+    {
+      "name": "V05: withdraw from rack",
+      "start_s": 167.99999999999756,
+      "end_s": 170.99999999999756,
+      "camera": "detail_review_ur"
+    },
+    {
+      "name": "V02: approach source vial",
+      "start_s": 170.99999999999739,
+      "end_s": 173.99999999999739,
+      "camera": "detail_review_ur"
+    },
+    {
+      "name": "V02: grasp empty vial",
+      "start_s": 173.99999999999721,
+      "end_s": 175.99999999999721,
+      "camera": "detail_review_ur"
+    },
+    {
+      "name": "V02: close on vial",
+      "start_s": 175.9999999999971,
+      "end_s": 176.9999999999971,
+      "camera": "detail_review_ur"
+    },
+    {
+      "name": "V02: lift source vial",
+      "start_s": 176.99999999999704,
+      "end_s": 179.99999999999704,
+      "camera": "detail_review_ur"
+    },
+    {
+      "name": "V02: approach openable side door",
+      "start_s": 179.99999999999687,
+      "end_s": 184.99999999999687,
+      "camera": "detail_review_ur"
+    },
+    {
+      "name": "V02: waiting outside shield",
+      "start_s": 184.9999999999966,
+      "end_s": 185.9999999999966,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V02: open side door",
+      "start_s": 185.9999999999966,
+      "end_s": 187.9999999999966,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V02: side entry",
+      "start_s": 187.9999999999966,
+      "end_s": 189.9999999999966,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V02: above red holder",
+      "start_s": 189.9999999999966,
+      "end_s": 191.9999999999966,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V02: seat vial on red holder",
+      "start_s": 191.9999999999966,
+      "end_s": 192.9999999999966,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V02: release vial",
+      "start_s": 192.9999999999966,
+      "end_s": 195.9999999999966,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V02: withdraw through side door",
+      "start_s": 195.9999999999966,
+      "end_s": 196.9999999999966,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V02: close side door",
+      "start_s": 196.9999999999966,
+      "end_s": 197.9999999999966,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V02: lower dosing head",
+      "start_s": 197.9999999999966,
+      "end_s": 198.9999999999966,
+      "camera": "detail_dosing_dose"
+    },
+    {
+      "name": "V02: dose",
+      "start_s": 198.9999999999966,
+      "end_s": 202.9999999999966,
+      "camera": "detail_dosing_dose"
+    },
+    {
+      "name": "V02: dose complete",
+      "start_s": 202.9999999999966,
+      "end_s": 203.9999999999966,
+      "camera": "detail_dosing_dose"
+    },
+    {
+      "name": "V02: raise head for retrieval",
+      "start_s": 203.9999999999966,
+      "end_s": 204.9999999999966,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V02: reopen side door",
+      "start_s": 204.9999999999966,
+      "end_s": 206.9999999999966,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V02: retrieve from red holder",
+      "start_s": 206.9999999999966,
+      "end_s": 207.9999999999966,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V02: grasp dosed vial",
+      "start_s": 207.9999999999966,
+      "end_s": 209.9999999999966,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V02: lift clear of red holder",
+      "start_s": 209.9999999999966,
+      "end_s": 211.9999999999966,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V02: withdraw vial through side door",
+      "start_s": 211.9999999999966,
+      "end_s": 212.9999999999966,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V02: clear dispenser toward rack",
+      "start_s": 212.9999999999966,
+      "end_s": 216.9999999999966,
+      "camera": "detail_review_ur"
+    },
+    {
+      "name": "V02: carry dosed vial to rack",
+      "start_s": 216.99999999999636,
+      "end_s": 220.99999999999636,
+      "camera": "detail_review_ur"
+    },
+    {
+      "name": "V02: place vial in rack",
+      "start_s": 220.99999999999613,
+      "end_s": 223.99999999999613,
+      "camera": "detail_review_ur"
+    },
+    {
+      "name": "V02: release vial",
+      "start_s": 223.99999999999596,
+      "end_s": 224.99999999999596,
+      "camera": "detail_review_ur"
+    },
+    {
+      "name": "V02: withdraw from rack",
+      "start_s": 224.9999999999959,
+      "end_s": 227.9999999999959,
+      "camera": "detail_review_ur"
+    },
+    {
+      "name": "V04: approach source vial",
+      "start_s": 227.99999999999574,
+      "end_s": 230.99999999999574,
+      "camera": "detail_review_ur"
+    },
+    {
+      "name": "V04: grasp empty vial",
+      "start_s": 230.99999999999557,
+      "end_s": 232.99999999999557,
+      "camera": "detail_review_ur"
+    },
+    {
+      "name": "V04: close on vial",
+      "start_s": 232.99999999999545,
+      "end_s": 233.99999999999545,
+      "camera": "detail_review_ur"
+    },
+    {
+      "name": "V04: lift source vial",
+      "start_s": 233.9999999999954,
+      "end_s": 236.9999999999954,
+      "camera": "detail_review_ur"
+    },
+    {
+      "name": "V04: approach openable side door",
+      "start_s": 236.99999999999523,
+      "end_s": 241.99999999999523,
+      "camera": "detail_review_ur"
+    },
+    {
+      "name": "V04: waiting outside shield",
+      "start_s": 241.99999999999494,
+      "end_s": 242.99999999999494,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V04: open side door",
+      "start_s": 242.99999999999494,
+      "end_s": 244.99999999999494,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V04: side entry",
+      "start_s": 244.99999999999494,
+      "end_s": 246.99999999999494,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V04: above red holder",
+      "start_s": 246.99999999999494,
+      "end_s": 248.99999999999494,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V04: seat vial on red holder",
+      "start_s": 248.99999999999494,
+      "end_s": 249.99999999999494,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V04: release vial",
+      "start_s": 249.99999999999494,
+      "end_s": 252.99999999999494,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V04: withdraw through side door",
+      "start_s": 252.99999999999494,
+      "end_s": 253.99999999999494,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V04: close side door",
+      "start_s": 253.99999999999494,
+      "end_s": 254.99999999999494,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V04: lower dosing head",
+      "start_s": 254.99999999999494,
+      "end_s": 255.99999999999494,
+      "camera": "detail_dosing_dose"
+    },
+    {
+      "name": "V04: dose",
+      "start_s": 255.99999999999494,
+      "end_s": 259.99999999999494,
+      "camera": "detail_dosing_dose"
+    },
+    {
+      "name": "V04: dose complete",
+      "start_s": 259.99999999999494,
+      "end_s": 260.99999999999494,
+      "camera": "detail_dosing_dose"
+    },
+    {
+      "name": "V04: raise head for retrieval",
+      "start_s": 260.99999999999494,
+      "end_s": 261.99999999999494,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V04: reopen side door",
+      "start_s": 261.99999999999494,
+      "end_s": 263.99999999999494,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V04: retrieve from red holder",
+      "start_s": 263.99999999999494,
+      "end_s": 264.99999999999494,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V04: grasp dosed vial",
+      "start_s": 264.99999999999494,
+      "end_s": 266.99999999999494,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V04: lift clear of red holder",
+      "start_s": 266.99999999999494,
+      "end_s": 268.99999999999494,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V04: withdraw vial through side door",
+      "start_s": 268.99999999999494,
+      "end_s": 269.99999999999494,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V04: clear dispenser toward rack",
+      "start_s": 269.99999999999494,
+      "end_s": 273.99999999999494,
+      "camera": "detail_review_ur"
+    },
+    {
+      "name": "V04: carry dosed vial to rack",
+      "start_s": 273.99999999999585,
+      "end_s": 277.99999999999585,
+      "camera": "detail_review_ur"
+    },
+    {
+      "name": "V04: place vial in rack",
+      "start_s": 277.99999999999676,
+      "end_s": 280.99999999999676,
+      "camera": "detail_review_ur"
+    },
+    {
+      "name": "V04: release vial",
+      "start_s": 280.99999999999744,
+      "end_s": 281.99999999999744,
+      "camera": "detail_review_ur"
+    },
+    {
+      "name": "V04: withdraw from rack",
+      "start_s": 281.99999999999767,
+      "end_s": 284.99999999999767,
+      "camera": "detail_review_ur"
+    },
+    {
+      "name": "V06: approach source vial",
+      "start_s": 284.99999999999835,
+      "end_s": 287.99999999999835,
+      "camera": "detail_review_ur"
+    },
+    {
+      "name": "V06: grasp empty vial",
+      "start_s": 287.99999999999903,
+      "end_s": 289.99999999999903,
+      "camera": "detail_review_ur"
+    },
+    {
+      "name": "V06: close on vial",
+      "start_s": 289.9999999999995,
+      "end_s": 290.9999999999995,
+      "camera": "detail_review_ur"
+    },
+    {
+      "name": "V06: lift source vial",
+      "start_s": 290.9999999999997,
+      "end_s": 293.9999999999997,
+      "camera": "detail_review_ur"
+    },
+    {
+      "name": "V06: approach openable side door",
+      "start_s": 294.0000000000004,
+      "end_s": 299.0000000000004,
+      "camera": "detail_review_ur"
+    },
+    {
+      "name": "V06: waiting outside shield",
+      "start_s": 299.00000000000153,
+      "end_s": 300.00000000000153,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V06: open side door",
+      "start_s": 300.00000000000153,
+      "end_s": 302.00000000000153,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V06: side entry",
+      "start_s": 302.00000000000153,
+      "end_s": 304.00000000000153,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V06: above red holder",
+      "start_s": 304.00000000000153,
+      "end_s": 306.00000000000153,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V06: seat vial on red holder",
+      "start_s": 306.00000000000153,
+      "end_s": 307.00000000000153,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V06: release vial",
+      "start_s": 307.00000000000153,
+      "end_s": 310.00000000000153,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V06: withdraw through side door",
+      "start_s": 310.00000000000153,
+      "end_s": 311.00000000000153,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V06: close side door",
+      "start_s": 311.00000000000153,
+      "end_s": 312.00000000000153,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V06: lower dosing head",
+      "start_s": 312.00000000000153,
+      "end_s": 313.00000000000153,
+      "camera": "detail_dosing_dose"
+    },
+    {
+      "name": "V06: dose",
+      "start_s": 313.00000000000153,
+      "end_s": 317.00000000000153,
+      "camera": "detail_dosing_dose"
+    },
+    {
+      "name": "V06: dose complete",
+      "start_s": 317.00000000000153,
+      "end_s": 318.00000000000153,
+      "camera": "detail_dosing_dose"
+    },
+    {
+      "name": "V06: raise head for retrieval",
+      "start_s": 318.00000000000153,
+      "end_s": 319.00000000000153,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V06: reopen side door",
+      "start_s": 319.00000000000153,
+      "end_s": 321.00000000000153,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V06: retrieve from red holder",
+      "start_s": 321.00000000000153,
+      "end_s": 322.00000000000153,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V06: grasp dosed vial",
+      "start_s": 322.00000000000153,
+      "end_s": 324.00000000000153,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V06: lift clear of red holder",
+      "start_s": 324.00000000000153,
+      "end_s": 326.00000000000153,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V06: withdraw vial through side door",
+      "start_s": 326.00000000000153,
+      "end_s": 327.00000000000153,
+      "camera": "detail_dosing_access"
+    },
+    {
+      "name": "V06: clear dispenser toward rack",
+      "start_s": 327.00000000000153,
+      "end_s": 331.00000000000153,
+      "camera": "detail_review_ur"
+    },
+    {
+      "name": "V06: carry dosed vial to rack",
+      "start_s": 331.00000000000244,
+      "end_s": 335.00000000000244,
+      "camera": "detail_review_ur"
+    },
+    {
+      "name": "V06: place vial in rack",
+      "start_s": 335.00000000000335,
+      "end_s": 338.00000000000335,
+      "camera": "detail_review_ur"
+    },
+    {
+      "name": "V06: release vial",
+      "start_s": 338.00000000000404,
+      "end_s": 339.00000000000404,
+      "camera": "detail_review_ur"
+    },
+    {
+      "name": "V06: withdraw from rack",
+      "start_s": 339.00000000000426,
+      "end_s": 342.00000000000426,
+      "camera": "detail_review_ur"
+    },
+    {
+      "name": "UR3 approach outside rack end",
+      "start_s": 342.00000000000495,
+      "end_s": 346.00000000000495,
+      "camera": "detail_review_rack"
+    },
+    {
+      "name": "UR3 prepare rack end grip",
+      "start_s": 346.00000000000585,
+      "end_s": 347.00000000000585,
+      "camera": "detail_review_rack"
+    },
+    {
+      "name": "UR3 approach rack side",
+      "start_s": 347.0000000000061,
+      "end_s": 350.0000000000061,
+      "camera": "detail_review_rack"
+    },
+    {
+      "name": "UR3 grasp rack side",
+      "start_s": 350.00000000000676,
+      "end_s": 351.00000000000676,
+      "camera": "detail_review_rack"
+    },
+    {
+      "name": "UR3 lift rack clear of loading support",
+      "start_s": 351.000000000007,
+      "end_s": 353.000000000007,
+      "camera": "detail_review_rack"
+    },
+    {
+      "name": "UR3 retract loaded rack away from head storage",
+      "start_s": 353.00000000000745,
+      "end_s": 356.00000000000745,
+      "camera": "detail_review_rack"
+    },
+    {
+      "name": "UR3 raise rack above stored heads",
+      "start_s": 356.00000000000813,
+      "end_s": 359.00000000000813,
+      "camera": "detail_review_rack"
+    },
+    {
+      "name": "UR3 raise rack in upright clearance corridor",
+      "start_s": 359.0000000000088,
+      "end_s": 367.0000000000088,
+      "camera": "detail_review_rack"
+    },
+    {
+      "name": "UR3 upright wrist reorientation",
+      "start_s": 367.00000000001063,
+      "end_s": 375.00000000001063,
+      "camera": "detail_review_rack"
+    },
+    {
+      "name": "UR5 move through empty-arm clearance corridor",
+      "start_s": 375.00000000001245,
+      "end_s": 380.00000000001245,
+      "camera": "detail_review_rack"
+    },
+    {
+      "name": "UR5 move through empty-arm clearance corridor",
+      "start_s": 380.0000000000136,
+      "end_s": 385.0000000000136,
+      "camera": "detail_review_rack"
+    },
+    {
+      "name": "UR5 approach reviewed handover",
+      "start_s": 385.0000000000147,
+      "end_s": 390.0000000000147,
+      "camera": "detail_review_handover"
+    },
+    {
+      "name": "UR5 prepare rack end grip",
+      "start_s": 390.00000000001586,
+      "end_s": 391.00000000001586,
+      "camera": "detail_review_rack"
+    },
+    {
+      "name": "UR3 approach shelf from left clearance",
+      "start_s": 391.0000000000161,
+      "end_s": 397.0000000000161,
+      "camera": "detail_review_rack"
+    },
+    {
+      "name": "UR3 present rack above middle shelf",
+      "start_s": 397.00000000001745,
+      "end_s": 403.00000000001745,
+      "camera": "detail_review_handover"
+    },
+    {
+      "name": "UR5 engage opposite rack end",
+      "start_s": 403.0000000000188,
+      "end_s": 406.0000000000188,
+      "camera": "detail_review_handover"
+    },
+    {
+      "name": "UR5 grasp rack",
+      "start_s": 406.0000000000195,
+      "end_s": 407.0000000000195,
+      "camera": "detail_review_handover"
+    },
+    {
+      "name": "Both UR arms hold rack",
+      "start_s": 407.0000000000197,
+      "end_s": 408.0000000000197,
+      "camera": "detail_review_handover"
+    },
+    {
+      "name": "UR3 release rack",
+      "start_s": 408.0000000000197,
+      "end_s": 409.0000000000197,
+      "camera": "detail_review_handover"
+    },
+    {
+      "name": "UR3 clear handover",
+      "start_s": 409.00000000001995,
+      "end_s": 412.00000000001995,
+      "camera": "detail_review_rack"
+    },
+    {
+      "name": "UR3 lower clear of receiver corridor",
+      "start_s": 412.00000000002063,
+      "end_s": 415.00000000002063,
+      "camera": "detail_review_rack"
+    },
+    {
+      "name": "UR5 carry rack clear around shelf upright",
+      "start_s": 415.0000000000213,
+      "end_s": 420.0000000000213,
+      "camera": "ur_table"
+    },
+    {
+      "name": "UR5 carry rack clear around shelf upright",
+      "start_s": 420.00000000002245,
+      "end_s": 425.00000000002245,
+      "camera": "ur_table"
+    },
+    {
+      "name": "UR5 carry rack clear around shelf upright",
+      "start_s": 425.0000000000236,
+      "end_s": 430.0000000000236,
+      "camera": "detail_review_rack"
+    },
+    {
+      "name": "UR5 keep rack clear during pickup turn",
+      "start_s": 430.0000000000247,
+      "end_s": 435.0000000000247,
+      "camera": "detail_review_rack"
+    },
+    {
+      "name": "UR5 hover over mobile pickup",
+      "start_s": 435.00000000002586,
+      "end_s": 440.00000000002586,
+      "camera": "detail_review_rack"
+    },
+    {
+      "name": "UR5 place rack for mobile",
+      "start_s": 440.000000000027,
+      "end_s": 443.000000000027,
+      "camera": "detail_review_rack"
+    },
+    {
+      "name": "UR5 release rack for mobile",
+      "start_s": 443.0000000000277,
+      "end_s": 444.0000000000277,
+      "camera": "detail_review_rack"
+    },
+    {
+      "name": "UR5 clear mobile pickup",
+      "start_s": 444.0000000000279,
+      "end_s": 448.0000000000279,
+      "camera": "detail_review_rack"
+    },
+    {
+      "name": "UR5 return to clear standby",
+      "start_s": 448.0000000000288,
+      "end_s": 454.0000000000288,
+      "camera": "detail_review_rack"
+    },
+    {
+      "name": "Mobile robot grasps and lifts six-vial rack",
+      "start_s": 454.0000000000302,
+      "end_s": 479.0000000000302,
+      "camera": "detail_review_mobile_pick"
+    },
+    {
+      "name": "Mobile robot carries six-vial rack to xArm table",
+      "start_s": 479.0000000000302,
+      "end_s": 567.0000000000302,
+      "camera": "detail_review_mobile"
+    },
+    {
+      "name": "xArm approaches receiving rack",
+      "start_s": 567.0000000000302,
+      "end_s": 573.0000000000302,
+      "camera": "detail_review_xarm"
+    },
+    {
+      "name": "xArm picks rack and places it in Opentrons: initial",
+      "start_s": 573.0000000000302,
+      "end_s": 573.0800000000303,
+      "camera": "detail_review_xarm"
+    },
+    {
+      "name": "xArm picks rack and places it in Opentrons: approach receiving tray",
+      "start_s": 573.0800000000303,
+      "end_s": 577.0789470000302,
+      "camera": "detail_review_xarm_pick"
+    },
+    {
+      "name": "xArm picks rack and places it in Opentrons: lower onto tray edges",
+      "start_s": 577.0789470000302,
+      "end_s": 580.0000000000302,
+      "camera": "detail_review_xarm_pick"
+    },
+    {
+      "name": "xArm picks rack and places it in Opentrons: grasp loaded tray",
+      "start_s": 580.0000000000302,
+      "end_s": 580.0789470000302,
+      "camera": "detail_review_xarm_pick"
+    },
+    {
+      "name": "xArm picks rack and places it in Opentrons: lift loaded tray upright",
+      "start_s": 580.0789470000302,
+      "end_s": 583.0806450000302,
+      "camera": "detail_review_xarm"
+    },
+    {
+      "name": "xArm picks rack and places it in Opentrons: carry upright corridor 1",
+      "start_s": 583.0806450000302,
+      "end_s": 588.0806450000302,
+      "camera": "detail_review_xarm"
+    },
+    {
+      "name": "xArm picks rack and places it in Opentrons: carry upright corridor 2",
+      "start_s": 588.0806450000302,
+      "end_s": 593.0806450000302,
+      "camera": "detail_review_xarm"
+    },
+    {
+      "name": "xArm picks rack and places it in Opentrons: carry upright corridor 3",
+      "start_s": 593.0806450000302,
+      "end_s": 598.0800000000303,
+      "camera": "detail_review_xarm"
+    },
+    {
+      "name": "xArm picks rack and places it in Opentrons: enter Opentrons above adapter",
+      "start_s": 598.0800000000303,
+      "end_s": 602.0789470000302,
+      "camera": "detail_review_ot2_place"
+    },
+    {
+      "name": "xArm picks rack and places it in Opentrons: lower loaded tray onto adapter",
+      "start_s": 602.0789470000302,
+      "end_s": 605.0000000000302,
+      "camera": "detail_review_ot2_place"
+    },
+    {
+      "name": "xArm picks rack and places it in Opentrons: release loaded tray",
+      "start_s": 605.0000000000302,
+      "end_s": 605.0789470000302,
+      "camera": "detail_review_ot2_place"
+    },
+    {
+      "name": "xArm picks rack and places it in Opentrons: withdraw from Opentrons",
+      "start_s": 605.0789470000302,
+      "end_s": 608.0000000000302,
+      "camera": "detail_review_ot2_place"
+    },
+    {
+      "name": "xArm clears Opentrons",
+      "start_s": 608.0000000000302,
+      "end_s": 620.0000000000302,
+      "camera": "detail_review_xarm"
+    },
+    {
+      "name": "V01: pick fresh tip A1",
+      "start_s": 620.0000000000302,
+      "end_s": 630.0000000000302,
+      "camera": "detail_tip_pick"
+    },
+    {
+      "name": "V01: five buffer aliquots",
+      "start_s": 630.0000000000302,
+      "end_s": 650.0000000000302,
+      "camera": "detail_review_buffer"
+    },
+    {
+      "name": "V01: discard tip into upper-right waste bin",
+      "start_s": 650.0000000000302,
+      "end_s": 660.0000000000302,
+      "camera": "detail_tip_waste"
+    },
+    {
+      "name": "V02: pick fresh tip B1",
+      "start_s": 660.0000000000302,
+      "end_s": 670.0000000000302,
+      "camera": "detail_tip_pick"
+    },
+    {
+      "name": "V02: five buffer aliquots",
+      "start_s": 670.0000000000302,
+      "end_s": 690.0000000000302,
+      "camera": "detail_review_buffer"
+    },
+    {
+      "name": "V02: discard tip into upper-right waste bin",
+      "start_s": 690.0000000000302,
+      "end_s": 700.0000000000302,
+      "camera": "detail_tip_waste"
+    },
+    {
+      "name": "V03: pick fresh tip C1",
+      "start_s": 700.0000000000302,
+      "end_s": 710.0000000000302,
+      "camera": "detail_tip_pick"
+    },
+    {
+      "name": "V03: five buffer aliquots",
+      "start_s": 710.0000000000302,
+      "end_s": 730.0000000000302,
+      "camera": "detail_review_buffer"
+    },
+    {
+      "name": "V03: discard tip into upper-right waste bin",
+      "start_s": 730.0000000000302,
+      "end_s": 740.0000000000302,
+      "camera": "detail_tip_waste"
+    },
+    {
+      "name": "V04: pick fresh tip D1",
+      "start_s": 740.0000000000302,
+      "end_s": 750.0000000000302,
+      "camera": "detail_tip_pick"
+    },
+    {
+      "name": "V04: five buffer aliquots",
+      "start_s": 750.0000000000302,
+      "end_s": 770.0000000000302,
+      "camera": "detail_review_buffer"
+    },
+    {
+      "name": "V04: discard tip into upper-right waste bin",
+      "start_s": 770.0000000000302,
+      "end_s": 780.0000000000302,
+      "camera": "detail_tip_waste"
+    },
+    {
+      "name": "V05: pick fresh tip E1",
+      "start_s": 780.0000000000302,
+      "end_s": 790.0000000000302,
+      "camera": "detail_tip_pick"
+    },
+    {
+      "name": "V05: five buffer aliquots",
+      "start_s": 790.0000000000302,
+      "end_s": 810.0000000000302,
+      "camera": "detail_review_buffer"
+    },
+    {
+      "name": "V05: discard tip into upper-right waste bin",
+      "start_s": 810.0000000000302,
+      "end_s": 820.0000000000302,
+      "camera": "detail_tip_waste"
+    },
+    {
+      "name": "V06: pick fresh tip F1",
+      "start_s": 820.0000000000302,
+      "end_s": 830.0000000000302,
+      "camera": "detail_tip_pick"
+    },
+    {
+      "name": "V06: five buffer aliquots",
+      "start_s": 830.0000000000302,
+      "end_s": 850.0000000000302,
+      "camera": "detail_review_buffer"
+    },
+    {
+      "name": "V06: discard tip into upper-right waste bin",
+      "start_s": 850.0000000000302,
+      "end_s": 860.0000000000302,
+      "camera": "detail_tip_waste"
+    },
+    {
+      "name": "Opentrons parks the dispensing assembly",
+      "start_s": 860.0000000000302,
+      "end_s": 863.0000000000302,
+      "camera": "detail_review_buffer"
+    },
+    {
+      "name": "xArm returns to filled rack",
+      "start_s": 863.0000000000302,
+      "end_s": 875.0000000000302,
+      "camera": "detail_review_xarm"
+    },
+    {
+      "name": "xArm moves stock rack from Opentrons to shaker: initial",
+      "start_s": 875.0000000000302,
+      "end_s": 875.0800000000303,
+      "camera": "detail_review_xarm"
+    },
+    {
+      "name": "xArm moves stock rack from Opentrons to shaker: approach receiving tray",
+      "start_s": 875.0800000000303,
+      "end_s": 879.0789470000302,
+      "camera": "detail_review_ot2_place"
+    },
+    {
+      "name": "xArm moves stock rack from Opentrons to shaker: lower onto tray edges",
+      "start_s": 879.0789470000302,
+      "end_s": 882.0000000000302,
+      "camera": "detail_review_ot2_place"
+    },
+    {
+      "name": "xArm moves stock rack from Opentrons to shaker: grasp loaded tray",
+      "start_s": 882.0000000000302,
+      "end_s": 882.0789470000302,
+      "camera": "detail_review_ot2_place"
+    },
+    {
+      "name": "xArm moves stock rack from Opentrons to shaker: lift loaded tray upright",
+      "start_s": 882.0789470000302,
+      "end_s": 885.0806450000302,
+      "camera": "detail_review_xarm"
+    },
+    {
+      "name": "xArm moves stock rack from Opentrons to shaker: carry upright corridor 1",
+      "start_s": 885.0806450000302,
+      "end_s": 890.0806450000302,
+      "camera": "detail_review_xarm"
+    },
+    {
+      "name": "xArm moves stock rack from Opentrons to shaker: carry upright corridor 2",
+      "start_s": 890.0806450000302,
+      "end_s": 895.0806450000302,
+      "camera": "detail_review_xarm"
+    },
+    {
+      "name": "xArm moves stock rack from Opentrons to shaker: carry upright corridor 3",
+      "start_s": 895.0806450000302,
+      "end_s": 900.0806450000302,
+      "camera": "detail_review_xarm"
+    },
+    {
+      "name": "xArm moves stock rack from Opentrons to shaker: carry upright corridor 4",
+      "start_s": 900.0806450000302,
+      "end_s": 905.0800000000303,
+      "camera": "detail_review_xarm"
+    },
+    {
+      "name": "xArm moves stock rack from Opentrons to shaker: enter Opentrons above adapter",
+      "start_s": 905.0800000000303,
+      "end_s": 909.0789470000302,
+      "camera": "detail_review_shaker"
+    },
+    {
+      "name": "xArm moves stock rack from Opentrons to shaker: lower loaded tray onto adapter",
+      "start_s": 909.0789470000302,
+      "end_s": 912.0000000000302,
+      "camera": "detail_review_shaker"
+    },
+    {
+      "name": "xArm moves stock rack from Opentrons to shaker: release loaded tray",
+      "start_s": 912.0000000000302,
+      "end_s": 912.0789470000302,
+      "camera": "detail_review_shaker"
+    },
+    {
+      "name": "xArm moves stock rack from Opentrons to shaker: withdraw from Opentrons",
+      "start_s": 912.0789470000302,
+      "end_s": 915.0000000000302,
+      "camera": "detail_review_shaker"
+    },
+    {
+      "name": "xArm releases and clears shaker",
+      "start_s": 915.0000000000305,
+      "end_s": 927.0000000000305,
+      "camera": "detail_review_shaker"
+    },
+    {
+      "name": "Shake six stock solutions",
+      "start_s": 927.0000000000305,
+      "end_s": 987.0000000000305,
+      "camera": "detail_review_shaker"
+    },
+    {
+      "name": "Stock preparation complete",
+      "start_s": 987.0000000000305,
+      "end_s": 989.0000000000305,
+      "camera": "detail_review_shaker"
+    }
+  ],
+  "events": [
+    {
+      "t": 6.0,
+      "action": "ur3_pick_vial",
+      "vial": "V01"
+    },
+    {
+      "t": 21.999999999999964,
+      "action": "ur3_place_in_dispenser",
+      "vial": "V01"
+    },
+    {
+      "t": 27.999999999999964,
+      "action": "dose_start",
+      "vial": "V01"
+    },
+    {
+      "t": 31.999999999999964,
+      "action": "dose_solid",
+      "vial": "V01"
+    },
+    {
+      "t": 36.999999999999964,
+      "action": "ur3_retrieve_dosed_vial",
+      "vial": "V01"
+    },
+    {
+      "t": 54.0,
+      "action": "ur3_place_vial_in_rack",
+      "vial": "V01"
+    },
+    {
+      "t": 63.0,
+      "action": "ur3_pick_vial",
+      "vial": "V03"
+    },
+    {
+      "t": 78.99999999999987,
+      "action": "ur3_place_in_dispenser",
+      "vial": "V03"
+    },
+    {
+      "t": 84.99999999999987,
+      "action": "dose_start",
+      "vial": "V03"
+    },
+    {
+      "t": 88.99999999999987,
+      "action": "dose_solid",
+      "vial": "V03"
+    },
+    {
+      "t": 93.99999999999987,
+      "action": "ur3_retrieve_dosed_vial",
+      "vial": "V03"
+    },
+    {
+      "t": 111.0,
+      "action": "ur3_place_vial_in_rack",
+      "vial": "V03"
+    },
+    {
+      "t": 120.0,
+      "action": "ur3_pick_vial",
+      "vial": "V05"
+    },
+    {
+      "t": 135.99999999999824,
+      "action": "ur3_place_in_dispenser",
+      "vial": "V05"
+    },
+    {
+      "t": 141.99999999999824,
+      "action": "dose_start",
+      "vial": "V05"
+    },
+    {
+      "t": 145.99999999999824,
+      "action": "dose_solid",
+      "vial": "V05"
+    },
+    {
+      "t": 150.99999999999824,
+      "action": "ur3_retrieve_dosed_vial",
+      "vial": "V05"
+    },
+    {
+      "t": 168.0,
+      "action": "ur3_place_vial_in_rack",
+      "vial": "V05"
+    },
+    {
+      "t": 177.0,
+      "action": "ur3_pick_vial",
+      "vial": "V02"
+    },
+    {
+      "t": 192.9999999999966,
+      "action": "ur3_place_in_dispenser",
+      "vial": "V02"
+    },
+    {
+      "t": 198.9999999999966,
+      "action": "dose_start",
+      "vial": "V02"
+    },
+    {
+      "t": 202.9999999999966,
+      "action": "dose_solid",
+      "vial": "V02"
+    },
+    {
+      "t": 207.9999999999966,
+      "action": "ur3_retrieve_dosed_vial",
+      "vial": "V02"
+    },
+    {
+      "t": 225.0,
+      "action": "ur3_place_vial_in_rack",
+      "vial": "V02"
+    },
+    {
+      "t": 234.0,
+      "action": "ur3_pick_vial",
+      "vial": "V04"
+    },
+    {
+      "t": 249.99999999999494,
+      "action": "ur3_place_in_dispenser",
+      "vial": "V04"
+    },
+    {
+      "t": 255.99999999999494,
+      "action": "dose_start",
+      "vial": "V04"
+    },
+    {
+      "t": 259.99999999999494,
+      "action": "dose_solid",
+      "vial": "V04"
+    },
+    {
+      "t": 264.99999999999494,
+      "action": "ur3_retrieve_dosed_vial",
+      "vial": "V04"
+    },
+    {
+      "t": 282.0,
+      "action": "ur3_place_vial_in_rack",
+      "vial": "V04"
+    },
+    {
+      "t": 291.0,
+      "action": "ur3_pick_vial",
+      "vial": "V06"
+    },
+    {
+      "t": 307.00000000000153,
+      "action": "ur3_place_in_dispenser",
+      "vial": "V06"
+    },
+    {
+      "t": 313.00000000000153,
+      "action": "dose_start",
+      "vial": "V06"
+    },
+    {
+      "t": 317.00000000000153,
+      "action": "dose_solid",
+      "vial": "V06"
+    },
+    {
+      "t": 322.00000000000153,
+      "action": "ur3_retrieve_dosed_vial",
+      "vial": "V06"
+    },
+    {
+      "t": 339.0,
+      "action": "ur3_place_vial_in_rack",
+      "vial": "V06"
+    },
+    {
+      "t": 351.0,
+      "action": "ur3_pick_loaded_rack"
+    },
+    {
+      "t": 407.0,
+      "action": "ur5_grasp_rack"
+    },
+    {
+      "t": 409.0,
+      "action": "ur3_release_rack"
+    },
+    {
+      "t": 444.0,
+      "action": "ur5_place_rack_at_pickup"
+    },
+    {
+      "t": 469.0000000000302,
+      "action": "mobile_pick_rack"
+    },
+    {
+      "t": 553.0000000000302,
+      "action": "mobile_place_on_xarm_table"
+    },
+    {
+      "t": 580.0000000000302,
+      "action": "xarm_pick_rack"
+    },
+    {
+      "t": 605.0000000000302,
+      "action": "xarm_place_in_ot2"
+    },
+    {
+      "t": 630.0000000000302,
+      "action": "xarm_clear_ot2"
+    },
+    {
+      "t": 650.0000000000302,
+      "action": "add_buffer",
+      "vial": "V01",
+      "volume_ul": 1000
+    },
+    {
+      "t": 690.0000000000302,
+      "action": "add_buffer",
+      "vial": "V02",
+      "volume_ul": 1000
+    },
+    {
+      "t": 730.0000000000302,
+      "action": "add_buffer",
+      "vial": "V03",
+      "volume_ul": 1000
+    },
+    {
+      "t": 770.0000000000302,
+      "action": "add_buffer",
+      "vial": "V04",
+      "volume_ul": 1000
+    },
+    {
+      "t": 810.0000000000302,
+      "action": "add_buffer",
+      "vial": "V05",
+      "volume_ul": 1000
+    },
+    {
+      "t": 850.0000000000302,
+      "action": "add_buffer",
+      "vial": "V06",
+      "volume_ul": 1000
+    },
+    {
+      "t": 863.0000000000302,
+      "action": "ot2_park"
+    },
+    {
+      "t": 882.0000000000302,
+      "action": "xarm_retrieve_rack"
+    },
+    {
+      "t": 912.0000000000305,
+      "action": "xarm_place_on_shaker"
+    },
+    {
+      "t": 927.0000000000305,
+      "action": "xarm_clear_shaker"
+    },
+    {
+      "t": 927.0000000000305,
+      "action": "shake"
+    },
+    {
+      "t": 987.0000000000305,
+      "action": "stop_shaker"
+    },
+    {
+      "t": 624.0000000000302,
+      "action": "pick_fresh_tip",
+      "tip": "A1",
+      "vial": "V01"
+    },
+    {
+      "t": 655.0000000000302,
+      "action": "discard_used_tip",
+      "tip": "A1",
+      "vial": "V01"
+    },
+    {
+      "t": 664.0000000000302,
+      "action": "pick_fresh_tip",
+      "tip": "B1",
+      "vial": "V02"
+    },
+    {
+      "t": 695.0000000000302,
+      "action": "discard_used_tip",
+      "tip": "B1",
+      "vial": "V02"
+    },
+    {
+      "t": 704.0000000000302,
+      "action": "pick_fresh_tip",
+      "tip": "C1",
+      "vial": "V03"
+    },
+    {
+      "t": 735.0000000000302,
+      "action": "discard_used_tip",
+      "tip": "C1",
+      "vial": "V03"
+    },
+    {
+      "t": 744.0000000000302,
+      "action": "pick_fresh_tip",
+      "tip": "D1",
+      "vial": "V04"
+    },
+    {
+      "t": 775.0000000000302,
+      "action": "discard_used_tip",
+      "tip": "D1",
+      "vial": "V04"
+    },
+    {
+      "t": 784.0000000000302,
+      "action": "pick_fresh_tip",
+      "tip": "E1",
+      "vial": "V05"
+    },
+    {
+      "t": 815.0000000000302,
+      "action": "discard_used_tip",
+      "tip": "E1",
+      "vial": "V05"
+    },
+    {
+      "t": 824.0000000000302,
+      "action": "pick_fresh_tip",
+      "tip": "F1",
+      "vial": "V06"
+    },
+    {
+      "t": 855.0000000000302,
+      "action": "discard_used_tip",
+      "tip": "F1",
+      "vial": "V06"
+    }
+  ],
+  "offsets": {
+    "mobile": 454.0000000000302,
+    "xarm": 573.0000000000302,
+    "buffer": 620.0000000000302,
+    "shaker_transfer": 875.0000000000302,
+    "shake": 927.0000000000305
+  },
+  "video_eligible": true,
+  "scene_sha256": "f1477a73dc116857794f42c2170c22db6ffe0ae7e24e48c996b2f55f262e5eaa",
+  "validation": {
+    "sampled_geometry_screens_passed": true,
+    "reports": [
+      "check_tip_revision",
+      "check_reviewed_state",
+      "check_reviewed_ur_motion",
+      "check_reviewed_mobile_motion",
+      "check_reviewed_xarm_motion"
+    ],
+    "continuous_time_or_force_validation": false
+  },
+  "tip_exchanges": [
+    {
+      "vial": "V01",
+      "tip": "A1",
+      "pickup_s": 624.0000000000302,
+      "liquid_start_s": 630.0000000000302,
+      "eject_s": 655.0000000000302,
+      "pickup_world_m": [
+        -0.437739214388232,
+        0.47628790796805404,
+        0.9962372275499923
+      ],
+      "waste_world_m": [
+        -0.23362839244554495,
+        0.4850417855540312,
+        1.0928472271327596
+      ]
+    },
+    {
+      "vial": "V02",
+      "tip": "B1",
+      "pickup_s": 664.0000000000302,
+      "liquid_start_s": 670.0000000000302,
+      "eject_s": 695.0000000000302,
+      "pickup_world_m": [
+        -0.437739214388232,
+        0.46728790796805403,
+        0.9962372275499923
+      ],
+      "waste_world_m": [
+        -0.23362839244554495,
+        0.4850417855540312,
+        1.0928472271327596
+      ]
+    },
+    {
+      "vial": "V03",
+      "tip": "C1",
+      "pickup_s": 704.0000000000302,
+      "liquid_start_s": 710.0000000000302,
+      "eject_s": 735.0000000000302,
+      "pickup_world_m": [
+        -0.437739214388232,
+        0.4582879079680541,
+        0.9962372275499923
+      ],
+      "waste_world_m": [
+        -0.23362839244554495,
+        0.4850417855540312,
+        1.0928472271327596
+      ]
+    },
+    {
+      "vial": "V04",
+      "tip": "D1",
+      "pickup_s": 744.0000000000302,
+      "liquid_start_s": 750.0000000000302,
+      "eject_s": 775.0000000000302,
+      "pickup_world_m": [
+        -0.437739214388232,
+        0.44928790796805407,
+        0.9962372275499923
+      ],
+      "waste_world_m": [
+        -0.23362839244554495,
+        0.4850417855540312,
+        1.0928472271327596
+      ]
+    },
+    {
+      "vial": "V05",
+      "tip": "E1",
+      "pickup_s": 784.0000000000302,
+      "liquid_start_s": 790.0000000000302,
+      "eject_s": 815.0000000000302,
+      "pickup_world_m": [
+        -0.437739214388232,
+        0.44028790796805406,
+        0.9962372275499923
+      ],
+      "waste_world_m": [
+        -0.23362839244554495,
+        0.4850417855540312,
+        1.0928472271327596
+      ]
+    },
+    {
+      "vial": "V06",
+      "tip": "F1",
+      "pickup_s": 824.0000000000302,
+      "liquid_start_s": 830.0000000000302,
+      "eject_s": 855.0000000000302,
+      "pickup_world_m": [
+        -0.437739214388232,
+        0.43128790796805405,
+        0.9962372275499923
+      ],
+      "waste_world_m": [
+        -0.23362839244554495,
+        0.4850417855540312,
+        1.0928472271327596
+      ]
+    }
+  ],
+  "source_scene": "/home/safety_agent/code/akg4pyscf-twin-preview/experiments/mobile_lab/outputs/vial_tip_revision/scene.usdc",
+  "source_workflow_sha256": "b0b14e83fc79f8679471a6dfab66d693425b3d55bc20fc08580abc795efdcd60",
+  "views": {
+    "overview": {
+      "position": [
+        -5.999999999999998,
+        -5.999999999999999,
+        4.300000000000001
+      ],
+      "target": [
+        -1.708588265717525,
+        -1.3509706211939863,
+        1.3049522271153577
+      ],
+      "fov": 31.620315063890565,
+      "label": "Overview"
+    },
+    "xarm_equipment": {
+      "position": [
+        2.65,
+        -3.8000000000000003,
+        2.65
+      ],
+      "target": [
+        0.410870239415686,
+        -0.13163847734059342,
+        1.316050355396579
+      ],
+      "fov": 24.644271351547395,
+      "label": "Xarm Equipment"
+    },
+    "ur_table": {
+      "position": [
+        0.1999999999999989,
+        -4.999999999999999,
+        2.5799999999999996
+      ],
+      "target": [
+        -2.4250256774568775,
+        -1.9311750173615656,
+        0.8331303944981214
+      ],
+      "fov": 35.33942337188053,
+      "label": "Ur Table"
+    },
+    "handover": {
+      "position": [
+        -2.8749999999999996,
+        -2.133,
+        1.71
+      ],
+      "target": [
+        -2.322801448924915,
+        -1.3967352652332201,
+        1.3188593596551483
+      ],
+      "fov": 25.36076698363964,
+      "label": "Handover"
+    },
+    "mobile": {
+      "position": [
+        0.19999999999999968,
+        -4.329999999999999,
+        3.079999999999999
+      ],
+      "target": [
+        -2.1559119676132785,
+        -1.581436037784508,
+        1.37850802339041
+      ],
+      "fov": 35.115393689697434,
+      "label": "Mobile"
+    },
+    "ot2": {
+      "position": [
+        -0.7800000000000002,
+        -0.5600000000000002,
+        1.34
+      ],
+      "target": [
+        -0.46977330626820774,
+        0.37068008119537765,
+        1.1461083164176298
+      ],
+      "fov": 29.83937171142973,
+      "label": "Buffer"
+    },
+    "shaker": {
+      "position": [
+        0.48,
+        -0.02,
+        1.43
+      ],
+      "target": [
+        0.13,
+        0.33,
+        1.1
+      ],
+      "fov": 40,
+      "label": "Shaker"
+    },
+    "ot2_full": {
+      "position": [
+        -0.8,
+        -1.2000000000000004,
+        1.7499999999999998
+      ],
+      "target": [
+        -0.5467301527858104,
+        -0.2919349380369304,
+        1.416425079278872
+      ],
+      "fov": 25.346010192617765,
+      "label": "Ot2 Full"
+    },
+    "vials": {
+      "position": [
+        -3.3400000000000003,
+        -2.5,
+        1.2
+      ],
+      "target": [
+        -3.3400000000000003,
+        -1.6176470588235292,
+        0.7294117647058822
+      ],
+      "fov": 15.82763434314131,
+      "label": "Vials"
+    },
+    "detail_dosing_dose": {
+      "position": [
+        -2.9411738056307573,
+        -2.0939070487980045,
+        1.197
+      ],
+      "target": [
+        -2.3221774630182055,
+        -2.4546209229542395,
+        0.4993403201965272
+      ],
+      "fov": 37.29907750810282,
+      "label": "Dosing Dose"
+    },
+    "detail_review_ur": {
+      "position": [
+        -3.8,
+        -3.099999999999999,
+        1.8799999999999992
+      ],
+      "target": [
+        -3.2676699192592427,
+        -2.3902265590123233,
+        1.4186472633580098
+      ],
+      "fov": 27.107528195463306,
+      "label": "Ur"
+    },
+    "detail_review_handover": {
+      "position": [
+        -2.8749999999999996,
+        -2.133,
+        1.71
+      ],
+      "target": [
+        -2.322801448924915,
+        -1.3967352652332201,
+        1.3188593596551483
+      ],
+      "fov": 25.36076698363964,
+      "label": "Handover"
+    },
+    "detail_review_xarm_pick": {
+      "position": [
+        -0.18000000000000016,
+        -1.1199999999999999,
+        1.16
+      ],
+      "target": [
+        0.3250762722761052,
+        -0.3118779643582315,
+        0.8569542366343368
+      ],
+      "fov": 22.89519252737121,
+      "label": "Xarm Pick"
+    },
+    "detail_review_ot2_place": {
+      "position": [
+        -0.45999999999999996,
+        -0.16599999999999998,
+        1.174
+      ],
+      "target": [
+        -0.6226380609466279,
+        0.7556156786975585,
+        0.8216175346156397
+      ],
+      "fov": 25.36076698363964,
+      "label": "Ot2 Place"
+    },
+    "detail_review_mobile": {
+      "position": [
+        0.19999999999999968,
+        -4.329999999999999,
+        3.079999999999999
+      ],
+      "target": [
+        -2.1559119676132785,
+        -1.581436037784508,
+        1.37850802339041
+      ],
+      "fov": 35.115393689697434,
+      "label": "Mobile"
+    },
+    "detail_review_xarm": {
+      "position": [
+        0.6000000000000001,
+        -1.3,
+        1.7300000000000004
+      ],
+      "target": [
+        0.08170916128661043,
+        -0.5225637419299157,
+        1.373675048384545
+      ],
+      "fov": 28.409272326265217,
+      "label": "Xarm"
+    },
+    "detail_review_buffer": {
+      "position": [
+        -0.7800000000000002,
+        -0.5600000000000002,
+        1.34
+      ],
+      "target": [
+        -0.46977330626820774,
+        0.37068008119537765,
+        1.1461083164176298
+      ],
+      "fov": 29.83937171142973,
+      "label": "Buffer"
+    },
+    "detail_review_shaker": {
+      "position": [
+        0.48,
+        -0.02,
+        1.43
+      ],
+      "target": [
+        0.13,
+        0.33,
+        1.1
+      ],
+      "fov": 40,
+      "label": "Shaker"
+    },
+    "detail_review_rack": {
+      "position": [
+        -3.3500000000000005,
+        -2.5500000000000007,
+        1.62
+      ],
+      "target": [
+        -2.7841575030875862,
+        -1.8224882182554683,
+        1.2319937164029162
+      ],
+      "fov": 28.409272326265217,
+      "label": "Rack"
+    },
+    "layout_plan": {
+      "position": [
+        -1.4,
+        -0.9,
+        9.0
+      ],
+      "target": [
+        -1.4,
+        -0.9,
+        8.0
+      ],
+      "fov": 35.33942337188053,
+      "label": "Layout Plan"
+    },
+    "detail_review_mobile_pick": {
+      "position": [
+        -2.13,
+        -2.5100000000000002,
+        1.3000000000000003
+      ],
+      "target": [
+        -1.4489947753930008,
+        -1.9141204284688764,
+        0.8743717346206259
+      ],
+      "fov": 20.861693160903002,
+      "label": "Mobile Pick"
+    },
+    "detail_tip_pick": {
+      "position": [
+        -0.5977392143882319,
+        0.1082879079680541,
+        1.2962372275499923
+      ],
+      "target": [
+        -0.22882483365965878,
+        0.915288115811808,
+        0.8350942516392761
+      ],
+      "fov": 27.107528195463306,
+      "label": "Tip Pick"
+    },
+    "detail_tip_waste": {
+      "position": [
+        -0.3336283924455449,
+        0.1850417855540313,
+        1.3078472271327595
+      ],
+      "target": [
+        -0.05880353748088846,
+        1.0095163504480005,
+        0.8131624881963782
+      ],
+      "fov": 29.83937171142973,
+      "label": "Tip Waste"
+    },
+    "detail_dosing_access": {
+      "position": [
+        -2.7967238388446916,
+        -2.0685455209358192,
+        1.1649999999999998
+      ],
+      "target": [
+        -3.463149519697814,
+        -2.673780674600375,
+        0.7296068205999405
+      ],
+      "fov": 49.426353760931796,
+      "label": "Dosing Access"
+    },
+    "ur": {
+      "position": [
+        -3.8,
+        -3.099999999999999,
+        1.8799999999999992
+      ],
+      "target": [
+        -3.2676699192592427,
+        -2.3902265590123233,
+        1.4186472633580098
+      ],
+      "fov": 27.107528195463306,
+      "label": "Ur"
+    },
+    "xarm": {
+      "position": [
+        0.6000000000000001,
+        -1.3,
+        1.7300000000000004
+      ],
+      "target": [
+        0.08170916128661043,
+        -0.5225637419299157,
+        1.373675048384545
+      ],
+      "fov": 28.409272326265217,
+      "label": "Xarm"
+    }
+  },
+  "initial_time_s": 0,
+  "chapters": [
+    {
+      "id": "ur",
+      "label": "Vial dispensing",
+      "time_s": 0,
+      "end_s": 342,
+      "camera": "detail_review_ur"
+    },
+    {
+      "id": "handover",
+      "label": "Rack handover",
+      "time_s": 342,
+      "end_s": 454,
+      "camera": "detail_review_rack"
+    },
+    {
+      "id": "mobile",
+      "label": "Mobile transfer",
+      "time_s": 454,
+      "end_s": 573,
+      "camera": "detail_review_mobile_pick"
+    },
+    {
+      "id": "xarm",
+      "label": "xArm transfer",
+      "time_s": 573,
+      "end_s": 620,
+      "camera": "detail_review_xarm"
+    },
+    {
+      "id": "ot2",
+      "label": "Liquid transfer",
+      "time_s": 620,
+      "end_s": 875,
+      "camera": "detail_tip_pick"
+    },
+    {
+      "id": "shaker",
+      "label": "Shaker loading",
+      "time_s": 875,
+      "end_s": 927,
+      "camera": "detail_review_xarm"
+    },
+    {
+      "id": "shake",
+      "label": "Shaking",
+      "time_s": 927,
+      "end_s": 989,
+      "camera": "detail_review_shaker"
+    }
+  ],
+  "web_camera_adjustments": {
+    "detail_review_shaker": "Wider framing to include shaker housing and rack; geometry and motion unchanged."
+  }
+}

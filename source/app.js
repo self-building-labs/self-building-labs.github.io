@@ -47,10 +47,12 @@ const tabs=[...document.querySelectorAll('[data-workflow]')];
 function selectWorkflow(name){
  const changed=document.querySelector(`[data-workflow="${name}"]`).getAttribute("aria-selected")!=="true";
  for(const tab of tabs){const selected=tab.dataset.workflow===name;tab.setAttribute('aria-selected',String(selected));tab.tabIndex=selected?0:-1;document.querySelector('#panel-'+tab.dataset.workflow).hidden=!selected;}
- if(changed)enterPanel(document.querySelector('#panel-'+name));
- const latestFrame=document.querySelector('#latest-workflow');
- if(name==='latest'&&!latestFrame.getAttribute('src'))latestFrame.src=latestFrame.dataset.src;
- document.querySelector('#latest-workflow').contentWindow.postMessage({type:'workflow-visibility',visible:name==='latest'},'*');
+ if(changed){enterPanel(document.querySelector('#panel-'+name));const tab=document.querySelector(`[data-workflow="${name}"]`),list=tab.parentElement;if(list.scrollWidth>list.clientWidth)list.scrollLeft=tab.offsetLeft-list.offsetLeft;}
+ for(const workflow of ['latest','hplc']){
+  const frame=document.querySelector('#'+workflow+'-workflow');
+  if(name===workflow&&!frame.getAttribute('src'))frame.src=frame.dataset.src;
+  frame.contentWindow.postMessage({type:'workflow-visibility',visible:name===workflow},'*');
+ }
  if(name==='combined')loadViewer().then(v=>v.setPlaying(preparationMode==='animation')).catch(()=>{});else if(viewer)viewer.setPlaying(false);
 }
 for(const tab of tabs){tab.addEventListener('click',()=>selectWorkflow(tab.dataset.workflow));tab.addEventListener('keydown',event=>{if(['ArrowLeft','ArrowRight','Home','End'].includes(event.key)){event.preventDefault();const index=event.key==='Home'?0:event.key==='End'?tabs.length-1:(tabs.indexOf(tab)+(event.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length;selectWorkflow(tabs[index].dataset.workflow);tabs[index].focus();}});}
@@ -66,7 +68,9 @@ selectWorkflow('latest');
 let lastScrollNotice=0;
 window.addEventListener('scroll',()=>{
  const now=performance.now();if(now-lastScrollNotice<80)return;lastScrollNotice=now;
- for(const frame of document.querySelectorAll('#latest-workflow,#equipment-inspection')){
+ for(const frame of document.querySelectorAll('#latest-workflow,#hplc-workflow')){
   if(frame.getAttribute('src'))frame.contentWindow.postMessage({type:'page-scrolling'},'*');
  }
 },{passive:true});
+
+document.querySelectorAll('[data-open-workflow]').forEach(link=>link.addEventListener('click',()=>selectWorkflow(link.dataset.openWorkflow)));

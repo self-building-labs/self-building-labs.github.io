@@ -1,4 +1,3 @@
-import {pathToFileURL} from 'node:url';
 import {resolve} from 'node:path';
 import {mkdirSync} from 'node:fs';
 mkdirSync('artifacts',{recursive:true});
@@ -10,7 +9,7 @@ const browser=await chromium.launch({executablePath:'/usr/bin/google-chrome',arg
 try{
  const page=await browser.newPage({viewport:{width:1200,height:1000}}),errors=[];
  page.on('pageerror',e=>errors.push(e.message));
- await page.goto(pathToFileURL(resolve('index.html')).href);
+ await page.goto((process.env.BASE_URL||'http://localhost:8877/'));
  await page.locator('#tab-combined').click();
  await page.locator('#viewer-shell').scrollIntoViewIfNeeded();
  await page.waitForFunction(()=>!!window.sclViewer,null,{timeout:120000});

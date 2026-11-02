@@ -1,4 +1,3 @@
-import {pathToFileURL} from 'node:url';
 import {resolve} from 'node:path';
 import {mkdirSync} from 'node:fs';
 mkdirSync('artifacts',{recursive:true});
@@ -8,7 +7,7 @@ const browser=await chromium.launch({executablePath:'/usr/bin/google-chrome',arg
 try{
  for(const file of ['xarm-workflow.html','index.html']){
  const page=await browser.newPage({viewport:{width:1100,height:900},reducedMotion:'reduce'});
- await page.goto(pathToFileURL(resolve(file)).href);
+ await page.goto(new URL(file,process.env.BASE_URL||'http://localhost:8877/').href);
  if(file==='index.html')await page.locator('#tab-combined').click();
  await page.waitForFunction(()=>!!window.sclViewer,null,{timeout:120000});
  const canvas=page.locator('#viewport canvas');await canvas.hover();

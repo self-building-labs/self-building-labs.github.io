@@ -1,4 +1,3 @@
-import {pathToFileURL} from 'node:url';
 import {resolve} from 'node:path';
 import {mkdirSync} from 'node:fs';
 mkdirSync('artifacts',{recursive:true});
@@ -22,8 +21,8 @@ async function checkRendered(page,canvas,label){
  console.log(label,stats);
 }
 try{
- const page=await browser.newPage({viewport:{width:1100,height:900},reducedMotion:'reduce'});page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});
- await page.goto(pathToFileURL(resolve('index.html')).href);
+ const page=await browser.newPage({viewport:{width:1100,height:900},reducedMotion:'reduce'});page.setDefaultTimeout(90000);page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});
+ await page.goto((process.env.BASE_URL||'http://localhost:8877/'));
  assert.equal(await page.locator('a.resource').first().getAttribute('href'),'self-building-labs-arxiv.pdf');
  await page.locator('#tab-latest').click();
  await page.locator('#latest-workflow').scrollIntoViewIfNeeded();
@@ -40,6 +39,7 @@ try{
  await frame.locator('#viewer-shell').screenshot({path:'artifacts/latest-ot2.png'});
  await checkRendered(page,frame.locator('canvas'),'Opentrons');
  await frame.locator('[data-stage="xarm"]').click();
+ await frame.locator('#play-toggle').click();
  await frame.locator('#timeline').fill('1280');await page.waitForTimeout(1500);
  await frame.locator('#viewer-shell').screenshot({path:'artifacts/latest-xarm.png'});
  await checkRendered(page,frame.locator('canvas'),'xArm');
@@ -47,6 +47,7 @@ try{
  await page.waitForFunction(()=>!!window.sclViewer,{},{timeout:120000});
  assert.equal(await page.evaluate(()=>sclViewer.duration),989);
  await page.locator('[data-stage=handover]').click();
+ await page.locator('#play-toggle').click();
  await page.locator('#timeline').fill('407');
  await page.locator('#viewer-shell').screenshot({path:'artifacts/refined-ur.png'});
  await checkRendered(page,page.locator('#viewport canvas'),'UR');

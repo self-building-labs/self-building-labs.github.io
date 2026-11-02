@@ -4,9 +4,14 @@
   "type": "module",
   "scripts": {
     "build": "node scripts/build-standalone.mjs",
-    "check": "node --check source/app.js && node --check source/viewer.js && node --check source/latest-app.js && node --check source/latest-viewer.js && node --check source/rendering.js && node --check source/fluorescence.js",
+    "check": "node --check source/app.js && node --check source/viewer.js && node --check source/latest-app.js && node --check source/latest-viewer.js && node --check source/rendering.js && node --check source/fluorescence.js && node --check source/hplc-app.js",
     "check:results": "node scripts/check-results.mjs",
-    "check:publish": "node scripts/check-publish.mjs"
+    "check:publish": "node scripts/check-publish.mjs",
+    "check:hplc": "node scripts/check-hplc.mjs",
+    "check:media": "node scripts/check-media.mjs && node scripts/check-new-media.mjs",
+    "serve": "python3 scripts/serve.py",
+    "check:shared": "node scripts/check-shared-assets.mjs",
+    "check:cache": "node scripts/check-asset-cache.mjs"
   },
   "dependencies": {
     "three": "0.180.0"

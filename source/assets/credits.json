@@ -55,8 +55,8 @@
       "scope": "No continuous telemetry, physical volume measurement, or within-mix trajectory; xArm animation is a separate source."
     },
     {
-      "asset": "self-building-labs-v8.mp4",
-      "description": "User-provided final paper video; preserved at original quality."
+      "asset": "self-building-labs-episode-1.mp4",
+      "description": "User-provided Episode 1 film, compressed for web playback. Encoding settings and quality measurements are recorded in media/provenance.json."
     }
   ],
   "geometry_sources": [

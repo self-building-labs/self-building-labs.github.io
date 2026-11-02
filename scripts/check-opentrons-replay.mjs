@@ -1,4 +1,3 @@
-import {pathToFileURL} from 'node:url';
 import {resolve} from 'node:path';
 import {mkdirSync} from 'node:fs';
 mkdirSync('artifacts',{recursive:true});
@@ -9,7 +8,7 @@ const metadata=JSON.parse(fs.readFileSync('source/assets/latest-workflow.json','
 const b=await chromium.launch({executablePath:'/usr/bin/google-chrome',args:['--no-sandbox','--use-angle=swiftshader','--enable-unsafe-swiftshader']});
 try{
 const p=await b.newPage({viewport:{width:1100,height:900},reducedMotion:'reduce'});const errors=[];p.on('pageerror',e=>errors.push(e.message));
-await p.goto(pathToFileURL(resolve('xarm-workflow.html')).href);
+await p.goto(new URL('xarm-workflow.html',process.env.BASE_URL||'http://localhost:8877/').href);
 await p.waitForFunction(()=>!!window.sclViewer,null,{timeout:120000});
 assert.equal(await p.evaluate(()=>sclViewer.opentronsRun),'cds-screen-20261013-02');
 assert.equal(await p.locator('#timeline').getAttribute('min'),'0');

@@ -2,8 +2,7 @@ import {pageIsScrolling} from './interaction.js';
 import {setupLighting,finishMaterials,createPipeline} from './rendering.js';
 import * as THREE from 'three';
 import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
-import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
-import {DRACOLoader} from 'three/addons/loaders/DRACOLoader.js';
+import {createModelLoader} from './model-loader.js';
 
 // Camera poses originate from the USD scene. glTF changes Z-up to Y-up.
 const up = ([x,y,z]) => new THREE.Vector3(x,z,-y);
@@ -45,30 +44,11 @@ export async function createViewer(status) {
     }
   });
   const environment=setupLighting(renderer,scene,{center:up([-2.8,-2,1.1]),extent:5});
-  const loader = new GLTFLoader();
-  const embedded = window.SCL_ASSETS;
-  const decode = text => Uint8Array.from(atob(text),c=>c.charCodeAt(0)).buffer;
-  // Pinned Three.js decoder hook: embedded worker libraries avoid file:// fetches.
-  class LocalDracoLoader extends DRACOLoader {
-    _loadLibrary(url,type) {
-      if (!embedded) return super._loadLibrary(url,type);
-      return Promise.resolve(type==='arraybuffer' ? decode(embedded.dracoWasm) : embedded.dracoJS);
-    }
-  }
-  const draco = new LocalDracoLoader();
-  draco.setDecoderPath('./vendor/draco/');
-  loader.setDRACOLoader(draco);
-  let gltf, metadata;
+  const {load,metadata:loadMetadata,draco}=createModelLoader();
+  let gltf,metadata;
   try {
-    if (embedded) {
-      status.textContent = 'Preparing the embedded laboratory…';
-      [gltf,metadata] = await Promise.all([loader.parseAsync(decode(embedded.model),''),Promise.resolve(embedded.workflow)]);
-    } else {
-      [gltf,metadata] = await Promise.all([
-        loader.loadAsync('./assets/workflow.glb', progress => { status.textContent = progress.total ? `Loading original scene · ${Math.round(progress.loaded/progress.total*100)}%` : `Loading original scene · ${(progress.loaded/1048576).toFixed(1)} MB`; }),
-        fetch('./assets/workflow.json').then(response=>{if(!response.ok)throw new Error('Workflow metadata unavailable');return response.json();})
-      ]);
-    }
+    status.textContent='Loading laboratory…';
+    [gltf,metadata]=await Promise.all([load('workflow'),loadMetadata('workflow')]);
   } catch (error) { controls.dispose(); environment.dispose(); renderer.dispose(); draco.dispose(); throw error; }
   draco.dispose();
   const posesOnly=metadata.mode==='poses';

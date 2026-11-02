@@ -1,0 +1,123 @@
+WEBVTT
+
+00:01.062 --> 00:04.925
+What if a laboratory could develop the
+capabilities its next experiment
+
+00:04.925 --> 00:05.600
+needs?
+
+00:05.925 --> 00:10.450
+From digital equipment models to real
+laboratory actions, this is the idea
+
+00:10.450 --> 00:12.662
+behind self-building laboratories.
+
+00:20.588 --> 00:23.713
+Self-driving laboratories automate
+experiments.
+
+00:24.000 --> 00:28.175
+A self-building laboratory also develops
+the capabilities those experiments
+
+00:28.175 --> 00:28.812
+require.
+
+00:29.088 --> 00:31.338
+A scientific goal reveals a gap.
+
+00:31.638 --> 00:35.425
+The system builds, validates, and retains
+the missing capability.
+
+00:36.538 --> 00:40.812
+Photographs, equipment information, and
+design files provide the starting
+
+00:40.812 --> 00:41.400
+point.
+
+00:41.675 --> 00:44.500
+Models describe moving parts and their
+limits.
+
+00:44.775 --> 00:48.812
+Real observations help refine equipment
+positions in the digital twin.
+
+00:50.488 --> 00:53.025
+Candidate motions are checked for
+collisions.
+
+00:53.300 --> 00:57.138
+The agent develops control interfaces and
+executable procedures.
+
+00:57.400 --> 01:02.375
+Near a fixture, visual and force feedback
+refine alignment and insertion.
+
+01:02.662 --> 01:07.325
+Procedures become reusable skills, with
+operating conditions, recovery
+
+01:07.325 --> 01:09.525
+steps, and runtime guardrails.
+
+01:11.688 --> 01:15.762
+We applied this process to cadmium sulfide
+quantum-dot synthesis.
+
+01:16.038 --> 01:19.975
+An Opentrons liquid handler prepared a
+ninety-six-well plate.
+
+01:20.288 --> 01:22.950
+A rail-mounted arm transferred it to a
+sealer,
+
+01:31.288 --> 01:33.587
+changed its grasp at an intermediate
+holder,
+
+01:35.212 --> 01:37.038
+and loaded an optical reader.
+
+01:37.375 --> 01:41.438
+The workflow combined two hundred and
+thirty-six liquid-handler commands
+
+01:41.438 --> 01:43.487
+with nineteen robotic stages.
+
+01:44.688 --> 01:48.375
+The plate sampled different reagent ratios
+and pH conditions.
+
+01:48.688 --> 01:52.512
+Optical measurements tracked fluorescence
+development over eight hours.
+
+01:52.812 --> 01:57.162
+Capability development led to a physical
+experimental workflow and a
+
+01:57.162 --> 01:58.450
+scientific measurement.
+
+02:02.575 --> 02:07.000
+In simulation, we also explored
+coordinated workflows across different
+
+02:07.000 --> 02:09.237
+robots and multiple workstations.
+
+02:09.525 --> 02:13.838
+The aim is a laboratory that adapts as
+scientific requirements change.
+
+02:14.088 --> 02:17.288
+Each validated skill expands what it can
+do next.

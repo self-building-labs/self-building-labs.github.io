@@ -1,0 +1,11 @@
+{
+  "workflow": "./site-assets/workflow-fc35ee5ebb3e39c05e23.gltf",
+  "latest-workflow": "./site-assets/latest-workflow-51ed1c5ba97be8a8837f.gltf",
+  "opentrons-replay": "./site-assets/opentrons-replay-02a3f375abb170b60b43.gltf",
+  "hplc-workflow": "./site-assets/hplc-workflow-6f12fb448306bfe0beed.gltf",
+  "hplc-hood": "./site-assets/hplc-hood-893bf5306fbbe9cf2582.gltf",
+  "workflow-metadata": "./site-assets/workflow-07526e75d7de6059d5a1.json",
+  "latest-workflow-metadata": "./site-assets/latest-workflow-ccd4e8950a70e1e4d33a.json",
+  "hplc-workflow-metadata": "./site-assets/hplc-workflow-80a6e13c71b8c0d58bc5.json",
+  "draco": "./site-assets/draco-a680d927bed9/"
+}

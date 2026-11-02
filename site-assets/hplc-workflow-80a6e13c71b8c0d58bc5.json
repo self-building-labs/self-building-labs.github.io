@@ -1,0 +1,196 @@
+{
+  "duration_s": 834.4,
+  "phases": [
+    {
+      "id": "home-to-hplc-staging",
+      "start_s": 0,
+      "end_s": 18.29
+    },
+    {
+      "id": "staging-to-30mm",
+      "start_s": 18.29,
+      "end_s": 23.29
+    },
+    {
+      "id": "approach30-to-contact",
+      "start_s": 23.29,
+      "end_s": 30.549999999999997
+    },
+    {
+      "id": "press-8mm",
+      "start_s": 30.549999999999997,
+      "end_s": 33.419999999999995
+    },
+    {
+      "id": "exit-compression",
+      "start_s": 33.419999999999995,
+      "end_s": 38.14999999999999
+    },
+    {
+      "id": "conditional-outward-to60",
+      "start_s": 38.14999999999999,
+      "end_s": 70.24
+    },
+    {
+      "id": "down-detach-magnets",
+      "start_s": 70.24,
+      "end_s": 74.46
+    },
+    {
+      "id": "retreat-for-rotation",
+      "start_s": 74.46,
+      "end_s": 86.35
+    },
+    {
+      "id": "open-before-hook",
+      "start_s": 86.35,
+      "end_s": 87.35
+    },
+    {
+      "id": "opening-rotation-clearance30",
+      "start_s": 87.35,
+      "end_s": 110.55
+    },
+    {
+      "id": "above-insertion-target",
+      "start_s": 110.55,
+      "end_s": 137.82
+    },
+    {
+      "id": "vertical-insertion-zplus5",
+      "start_s": 137.82,
+      "end_s": 154.12
+    },
+    {
+      "id": "fixed-z-takeup-and-pull290",
+      "start_s": 154.12,
+      "end_s": 302.58000000000004
+    },
+    {
+      "id": "bearing-detach-and-rise",
+      "start_s": 302.58000000000004,
+      "end_s": 328.51000000000005
+    },
+    {
+      "id": "post-detach-retreat",
+      "start_s": 328.51000000000005,
+      "end_s": 344.08000000000004
+    },
+    {
+      "id": "detach-to-home",
+      "start_s": 344.08000000000004,
+      "end_s": 363.35
+    },
+    {
+      "id": "home-to-slot2-revised-entry",
+      "start_s": 363.35,
+      "end_s": 402.89000000000004
+    },
+    {
+      "id": "slot2-approach",
+      "start_s": 402.89000000000004,
+      "end_s": 435.58000000000004
+    },
+    {
+      "id": "slot2-close",
+      "start_s": 435.58000000000004,
+      "end_s": 436.58000000000004
+    },
+    {
+      "id": "slot2-lift",
+      "start_s": 436.58000000000004,
+      "end_s": 457.54
+    },
+    {
+      "id": "slot2-held-to-home",
+      "start_s": 457.54,
+      "end_s": 496.42
+    },
+    {
+      "id": "home-held-to-hplc-entry",
+      "start_s": 496.42,
+      "end_s": 524.15
+    },
+    {
+      "id": "hplc-descent",
+      "start_s": 524.15,
+      "end_s": 562.22
+    },
+    {
+      "id": "release-partial-open",
+      "start_s": 562.22,
+      "end_s": 563.22
+    },
+    {
+      "id": "release-immediate-withdraw-100mm",
+      "start_s": 563.22,
+      "end_s": 584.37
+    },
+    {
+      "id": "withdrawal-to-closure",
+      "start_s": 584.37,
+      "end_s": 612.14
+    },
+    {
+      "id": "closure-close",
+      "start_s": 612.14,
+      "end_s": 613.14
+    },
+    {
+      "id": "closure-push-contact-approach",
+      "start_s": 613.14,
+      "end_s": 651.84
+    },
+    {
+      "id": "closure-close-drawer",
+      "start_s": 651.84,
+      "end_s": 805.13
+    },
+    {
+      "id": "closure-press8",
+      "start_s": 805.13,
+      "end_s": 808.0
+    },
+    {
+      "id": "closure-unload-spring",
+      "start_s": 808.0,
+      "end_s": 812.73
+    },
+    {
+      "id": "closure-withdraw-from-panel",
+      "start_s": 812.73,
+      "end_s": 834.4
+    }
+  ],
+  "source_workflow_sha256": "13f654af7a182a2bcd7f7c0c40b2dab9a819925fd19ce90485eb72c29d7ccda2",
+  "source_scene_sha256": "d3513e13ef0ba27970356a18546901473e94a67470e1c8e79e01cd52a5c5f710",
+  "sample_rate_hz": 5,
+  "description": "Kinematic replay of the saved HPLC workflow; no physical execution or new planning.",
+  "model_sha256": "61ebc7421bbb7f5f466c7b9e5ebc12c49933e2686ddaa9c08d0bf1c45edc1a26",
+  "source_workflow": "hplc-video-20261030-twin-v6-input/workflow.json",
+  "source_rendered_scene": "hplc-video-20261030-twin-v6-native/initial-scene.usdc",
+  "export": "Saved 5 Hz state samples; calibrated forward kinematics; authored world transforms for robot, fingers, plates and drawer; Blender USD to glTF with Draco geometry compression.",
+  "hood": {
+    "file": "hplc-hood.glb",
+    "sha256": "f49bc4ef880cfd059216c6b5b427ddb3aa2f0d3a1a0d46dc7dc104ddca5fd576",
+    "source_scene": "/tmp/sbl-latest-workflow.usdc",
+    "source_scene_sha256": "a8e41311896cd4598feceb1833e3d8672a5b14e07d5532299c9662bd52d86ceb",
+    "source_prims": [
+      "/root/hood_ROOT",
+      "/Motion/hood/sash"
+    ],
+    "description": "Complete detailed hood from the original website workflow scene, including cabinet, worktop, vents, service fittings, accessories and sash; placed using the HPLC scene hood transform."
+  },
+  "appearance": {
+    "material_reference": "source/assets/latest-workflow.glb",
+    "palette": "source/assets/reference-materials.json",
+    "lighting": "Shared rendering.js, matching quantum-dot viewer light placement, shadow extent, exposure, environment and pixel ratio",
+    "textures": "Existing photo-fascia texture maps retained",
+    "surface_normals": "Crease-aware smoothing on robot CAD housings; 60-degree threshold preserves mechanical edges.",
+    "verified_matching_texture_maps": [
+      "PlateLoc_screen_snapshot",
+      "Photographic_EchoTherm_fascia",
+      "Waters_photo_fascia"
+    ]
+  }
+}

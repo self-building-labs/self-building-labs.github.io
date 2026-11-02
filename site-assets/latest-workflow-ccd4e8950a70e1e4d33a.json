@@ -1,0 +1,1604 @@
+{
+  "duration_s": 1335.164147,
+  "phases": [
+    {
+      "name": "Opentrons synthesis",
+      "start_s": 0,
+      "end_s": 1237.931147
+    },
+    {
+      "name": "xArm plate transfer and instrument cycle",
+      "start_s": 1237.931147,
+      "end_s": 1335.164147
+    }
+  ],
+  "basis": "Archived command endpoints, eight-channel tip accounting and nominal liquid ledger. Raised transfers and tip pickup/disposal poses are inferred for visualization; no continuous telemetry or within-mix trajectory was recorded. The following xArm replay has a separate source.",
+  "sources": {
+    "scene": {
+      "file": "xarm-contact-fit.usda",
+      "sha256": "1af9b0ac02829787900505c0054a6adbd81f85de5a39eeda7f4cb0852ec41b84"
+    },
+    "xarm_timeline": {
+      "file": "timeline.json",
+      "sha256": "336089b690b5df57a1b9ebb466af98ad84bd8efa52ff4f044f7479baef38517b"
+    },
+    "ot2_endpoints": {
+      "file": "opentrons-cds-screen-20261013-02-isaac-replay/simulation/timeline.jsonl",
+      "sha256": "c7c803ddf1eb86f1a2fb0c3c6f293e1359a3d8629f5704cdff2ed23d9b36315c"
+    },
+    "film_render": {
+      "file": "render_film.py",
+      "sha256": "8f8bfa716910e20ce97ce1f3f4bd80c274e5e66a1caaa6a9f4d41fcd38a7ff9b"
+    }
+  },
+  "lighting": {
+    "reference": "self-building-lab-film-v3",
+    "dome_color": [
+      0.9,
+      0.95,
+      1.0
+    ],
+    "usd_dome_intensity": 2600,
+    "usd_key_intensity": 2600,
+    "usd_key_angle_deg": 12,
+    "usd_key_rotation_xyz_deg": [
+      -35,
+      -20,
+      -25
+    ],
+    "browser": "Approximation using environment lighting and soft directional shadows; no Isaac ray tracing"
+  },
+  "xarm_clip_duration_s": 157.233,
+  "xarm_clip_start_s": 60,
+  "opentrons": {
+    "source_run": "cds-screen-20261013-02",
+    "source_archive_sha256": "02a200dae5a6804698342fe88b69b1ca8ef0b57390b805a94d3a49c6c95c9960",
+    "run_duration_s": 1237.931147,
+    "clip_duration_s": 180.0,
+    "endpoint_count": 98,
+    "inferred_tip_handling_indices": [
+      3,
+      8,
+      10,
+      14,
+      16,
+      45,
+      47,
+      75,
+      77,
+      104,
+      106,
+      132,
+      134,
+      136,
+      138,
+      140,
+      142,
+      144,
+      146,
+      150,
+      152,
+      158,
+      160,
+      166,
+      168,
+      174,
+      176,
+      182,
+      184,
+      190,
+      192,
+      198,
+      200,
+      206,
+      208,
+      214,
+      216,
+      222
+    ],
+    "completed_commands": 138,
+    "tips_used": 152,
+    "tips_remaining": 40,
+    "final_volume_ul_per_well": 230,
+    "basis": "Archived command endpoints, eight-channel tip accounting and nominal liquid ledger. Raised transfers and tip pickup/disposal poses are inferred for visualization; no continuous telemetry or within-mix trajectory was recorded. The following xArm replay has a separate source.",
+    "endpoint_checks": [
+      {
+        "index": 3,
+        "basis": "nominal_tip_handling",
+        "time_s": 10.681082,
+        "xyz_mm": {
+          "x": 14.38,
+          "y": 345.74,
+          "z": 5.39
+        },
+        "has_tip": true
+      },
+      {
+        "index": 4,
+        "basis": "recorded",
+        "time_s": 20.501739,
+        "xyz_mm": {
+          "x": 182.9,
+          "y": 164.3,
+          "z": 3.1
+        },
+        "has_tip": true
+      },
+      {
+        "index": 5,
+        "basis": "recorded",
+        "time_s": 26.408488,
+        "xyz_mm": {
+          "x": 191.9,
+          "y": 164.3,
+          "z": 14.1
+        },
+        "has_tip": true
+      },
+      {
+        "index": 6,
+        "basis": "recorded",
+        "time_s": 35.539038,
+        "xyz_mm": {
+          "x": 182.9,
+          "y": 164.3,
+          "z": 3.1
+        },
+        "has_tip": true
+      },
+      {
+        "index": 7,
+        "basis": "recorded",
+        "time_s": 41.697491,
+        "xyz_mm": {
+          "x": 200.9,
+          "y": 164.3,
+          "z": 14.1
+        },
+        "has_tip": true
+      },
+      {
+        "index": 8,
+        "basis": "nominal_tip_handling",
+        "time_s": 53.972934,
+        "xyz_mm": {
+          "x": 329.5,
+          "y": 345.5,
+          "z": 161.1
+        },
+        "has_tip": false
+      },
+      {
+        "index": 10,
+        "basis": "nominal_tip_handling",
+        "time_s": 60.579194,
+        "xyz_mm": {
+          "x": 23.38,
+          "y": 345.74,
+          "z": 5.39
+        },
+        "has_tip": true
+      },
+      {
+        "index": 11,
+        "basis": "recorded",
+        "time_s": 70.50994,
+        "xyz_mm": {
+          "x": 155.9,
+          "y": 164.3,
+          "z": 3.1
+        },
+        "has_tip": true
+      },
+      {
+        "index": 12,
+        "basis": "recorded",
+        "time_s": 76.578711,
+        "xyz_mm": {
+          "x": 191.9,
+          "y": 164.3,
+          "z": 14.1
+        },
+        "has_tip": true
+      },
+      {
+        "index": 13,
+        "basis": "recorded",
+        "time_s": 114.672849,
+        "xyz_mm": {
+          "x": 191.9,
+          "y": 164.3,
+          "z": 3.1
+        },
+        "has_tip": true
+      },
+      {
+        "index": 14,
+        "basis": "nominal_tip_handling",
+        "time_s": 127.144392,
+        "xyz_mm": {
+          "x": 329.5,
+          "y": 345.5,
+          "z": 161.1
+        },
+        "has_tip": false
+      },
+      {
+        "index": 16,
+        "basis": "nominal_tip_handling",
+        "time_s": 133.658036,
+        "xyz_mm": {
+          "x": 32.38,
+          "y": 345.74,
+          "z": 5.39
+        },
+        "has_tip": true
+      },
+      {
+        "index": 17,
+        "basis": "recorded",
+        "time_s": 146.660692,
+        "xyz_mm": {
+          "x": 146.9,
+          "y": 164.3,
+          "z": 3.1
+        },
+        "has_tip": true
+      },
+      {
+        "index": 18,
+        "basis": "recorded",
+        "time_s": 151.601625,
+        "xyz_mm": {
+          "x": 146.38,
+          "y": 74.26,
+          "z": 17.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 20,
+        "basis": "recorded",
+        "time_s": 155.076048,
+        "xyz_mm": {
+          "x": 155.38,
+          "y": 74.26,
+          "z": 17.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 22,
+        "basis": "recorded",
+        "time_s": 158.655966,
+        "xyz_mm": {
+          "x": 164.38,
+          "y": 74.26,
+          "z": 17.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 24,
+        "basis": "recorded",
+        "time_s": 171.956056,
+        "xyz_mm": {
+          "x": 146.9,
+          "y": 164.3,
+          "z": 3.1
+        },
+        "has_tip": true
+      },
+      {
+        "index": 25,
+        "basis": "recorded",
+        "time_s": 176.881628,
+        "xyz_mm": {
+          "x": 173.38,
+          "y": 74.26,
+          "z": 17.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 27,
+        "basis": "recorded",
+        "time_s": 180.460071,
+        "xyz_mm": {
+          "x": 182.38,
+          "y": 74.26,
+          "z": 17.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 29,
+        "basis": "recorded",
+        "time_s": 184.306107,
+        "xyz_mm": {
+          "x": 191.38,
+          "y": 74.26,
+          "z": 17.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 31,
+        "basis": "recorded",
+        "time_s": 197.842434,
+        "xyz_mm": {
+          "x": 146.9,
+          "y": 164.3,
+          "z": 3.1
+        },
+        "has_tip": true
+      },
+      {
+        "index": 32,
+        "basis": "recorded",
+        "time_s": 202.778002,
+        "xyz_mm": {
+          "x": 200.38,
+          "y": 74.26,
+          "z": 17.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 34,
+        "basis": "recorded",
+        "time_s": 206.290748,
+        "xyz_mm": {
+          "x": 209.38,
+          "y": 74.26,
+          "z": 17.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 36,
+        "basis": "recorded",
+        "time_s": 209.864954,
+        "xyz_mm": {
+          "x": 218.38,
+          "y": 74.26,
+          "z": 17.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 38,
+        "basis": "recorded",
+        "time_s": 223.161384,
+        "xyz_mm": {
+          "x": 146.9,
+          "y": 164.3,
+          "z": 3.1
+        },
+        "has_tip": true
+      },
+      {
+        "index": 39,
+        "basis": "recorded",
+        "time_s": 228.188328,
+        "xyz_mm": {
+          "x": 227.38,
+          "y": 74.26,
+          "z": 17.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 41,
+        "basis": "recorded",
+        "time_s": 231.603294,
+        "xyz_mm": {
+          "x": 236.38,
+          "y": 74.26,
+          "z": 17.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 43,
+        "basis": "recorded",
+        "time_s": 235.012535,
+        "xyz_mm": {
+          "x": 245.38,
+          "y": 74.26,
+          "z": 17.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 45,
+        "basis": "nominal_tip_handling",
+        "time_s": 247.533329,
+        "xyz_mm": {
+          "x": 329.5,
+          "y": 345.5,
+          "z": 161.1
+        },
+        "has_tip": false
+      },
+      {
+        "index": 47,
+        "basis": "nominal_tip_handling",
+        "time_s": 254.013973,
+        "xyz_mm": {
+          "x": 41.38,
+          "y": 345.74,
+          "z": 5.39
+        },
+        "has_tip": true
+      },
+      {
+        "index": 48,
+        "basis": "recorded",
+        "time_s": 266.682285,
+        "xyz_mm": {
+          "x": 182.9,
+          "y": 164.3,
+          "z": 3.1
+        },
+        "has_tip": true
+      },
+      {
+        "index": 49,
+        "basis": "recorded",
+        "time_s": 270.965051,
+        "xyz_mm": {
+          "x": 146.38,
+          "y": 74.26,
+          "z": 17.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 51,
+        "basis": "recorded",
+        "time_s": 273.555183,
+        "xyz_mm": {
+          "x": 155.38,
+          "y": 74.26,
+          "z": 17.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 53,
+        "basis": "recorded",
+        "time_s": 276.058952,
+        "xyz_mm": {
+          "x": 164.38,
+          "y": 74.26,
+          "z": 17.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 55,
+        "basis": "recorded",
+        "time_s": 279.556118,
+        "xyz_mm": {
+          "x": 173.38,
+          "y": 74.26,
+          "z": 17.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 57,
+        "basis": "recorded",
+        "time_s": 282.142412,
+        "xyz_mm": {
+          "x": 182.38,
+          "y": 74.26,
+          "z": 17.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 59,
+        "basis": "recorded",
+        "time_s": 294.205868,
+        "xyz_mm": {
+          "x": 182.9,
+          "y": 164.3,
+          "z": 3.1
+        },
+        "has_tip": true
+      },
+      {
+        "index": 60,
+        "basis": "recorded",
+        "time_s": 298.072116,
+        "xyz_mm": {
+          "x": 191.38,
+          "y": 74.26,
+          "z": 17.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 62,
+        "basis": "recorded",
+        "time_s": 300.723742,
+        "xyz_mm": {
+          "x": 200.38,
+          "y": 74.26,
+          "z": 17.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 64,
+        "basis": "recorded",
+        "time_s": 303.226211,
+        "xyz_mm": {
+          "x": 209.38,
+          "y": 74.26,
+          "z": 17.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 66,
+        "basis": "recorded",
+        "time_s": 305.485679,
+        "xyz_mm": {
+          "x": 218.38,
+          "y": 74.26,
+          "z": 17.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 68,
+        "basis": "recorded",
+        "time_s": 308.865991,
+        "xyz_mm": {
+          "x": 227.38,
+          "y": 74.26,
+          "z": 17.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 70,
+        "basis": "recorded",
+        "time_s": 317.138277,
+        "xyz_mm": {
+          "x": 182.9,
+          "y": 164.3,
+          "z": 3.1
+        },
+        "has_tip": true
+      },
+      {
+        "index": 71,
+        "basis": "recorded",
+        "time_s": 321.622573,
+        "xyz_mm": {
+          "x": 236.38,
+          "y": 74.26,
+          "z": 17.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 73,
+        "basis": "recorded",
+        "time_s": 324.535219,
+        "xyz_mm": {
+          "x": 245.38,
+          "y": 74.26,
+          "z": 17.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 75,
+        "basis": "nominal_tip_handling",
+        "time_s": 336.921715,
+        "xyz_mm": {
+          "x": 329.5,
+          "y": 345.5,
+          "z": 161.1
+        },
+        "has_tip": false
+      },
+      {
+        "index": 77,
+        "basis": "nominal_tip_handling",
+        "time_s": 343.469891,
+        "xyz_mm": {
+          "x": 50.38,
+          "y": 345.74,
+          "z": 5.39
+        },
+        "has_tip": true
+      },
+      {
+        "index": 78,
+        "basis": "recorded",
+        "time_s": 356.479479,
+        "xyz_mm": {
+          "x": 164.9,
+          "y": 164.3,
+          "z": 3.1
+        },
+        "has_tip": true
+      },
+      {
+        "index": 79,
+        "basis": "recorded",
+        "time_s": 359.733141,
+        "xyz_mm": {
+          "x": 146.38,
+          "y": 74.26,
+          "z": 17.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 81,
+        "basis": "recorded",
+        "time_s": 361.65783,
+        "xyz_mm": {
+          "x": 155.38,
+          "y": 74.26,
+          "z": 17.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 83,
+        "basis": "recorded",
+        "time_s": 363.427096,
+        "xyz_mm": {
+          "x": 164.38,
+          "y": 74.26,
+          "z": 17.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 85,
+        "basis": "recorded",
+        "time_s": 365.437968,
+        "xyz_mm": {
+          "x": 173.38,
+          "y": 74.26,
+          "z": 17.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 87,
+        "basis": "recorded",
+        "time_s": 367.539987,
+        "xyz_mm": {
+          "x": 182.38,
+          "y": 74.26,
+          "z": 17.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 89,
+        "basis": "recorded",
+        "time_s": 369.522935,
+        "xyz_mm": {
+          "x": 191.38,
+          "y": 74.26,
+          "z": 17.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 91,
+        "basis": "recorded",
+        "time_s": 371.712439,
+        "xyz_mm": {
+          "x": 200.38,
+          "y": 74.26,
+          "z": 17.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 93,
+        "basis": "recorded",
+        "time_s": 374.07099,
+        "xyz_mm": {
+          "x": 209.38,
+          "y": 74.26,
+          "z": 17.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 95,
+        "basis": "recorded",
+        "time_s": 376.394825,
+        "xyz_mm": {
+          "x": 218.38,
+          "y": 74.26,
+          "z": 17.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 97,
+        "basis": "recorded",
+        "time_s": 378.368104,
+        "xyz_mm": {
+          "x": 227.38,
+          "y": 74.26,
+          "z": 17.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 99,
+        "basis": "recorded",
+        "time_s": 384.069931,
+        "xyz_mm": {
+          "x": 164.9,
+          "y": 164.3,
+          "z": 3.1
+        },
+        "has_tip": true
+      },
+      {
+        "index": 100,
+        "basis": "recorded",
+        "time_s": 387.597634,
+        "xyz_mm": {
+          "x": 236.38,
+          "y": 74.26,
+          "z": 17.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 102,
+        "basis": "recorded",
+        "time_s": 389.823514,
+        "xyz_mm": {
+          "x": 245.38,
+          "y": 74.26,
+          "z": 17.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 104,
+        "basis": "nominal_tip_handling",
+        "time_s": 402.230601,
+        "xyz_mm": {
+          "x": 329.5,
+          "y": 345.5,
+          "z": 161.1
+        },
+        "has_tip": false
+      },
+      {
+        "index": 106,
+        "basis": "nominal_tip_handling",
+        "time_s": 408.729966,
+        "xyz_mm": {
+          "x": 59.38,
+          "y": 345.74,
+          "z": 5.39
+        },
+        "has_tip": true
+      },
+      {
+        "index": 107,
+        "basis": "recorded",
+        "time_s": 419.891267,
+        "xyz_mm": {
+          "x": 191.9,
+          "y": 164.3,
+          "z": 3.1
+        },
+        "has_tip": true
+      },
+      {
+        "index": 108,
+        "basis": "recorded",
+        "time_s": 423.146613,
+        "xyz_mm": {
+          "x": 146.38,
+          "y": 74.26,
+          "z": 17.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 110,
+        "basis": "recorded",
+        "time_s": 424.946056,
+        "xyz_mm": {
+          "x": 155.38,
+          "y": 74.26,
+          "z": 17.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 112,
+        "basis": "recorded",
+        "time_s": 426.745572,
+        "xyz_mm": {
+          "x": 164.38,
+          "y": 74.26,
+          "z": 17.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 114,
+        "basis": "recorded",
+        "time_s": 428.646595,
+        "xyz_mm": {
+          "x": 173.38,
+          "y": 74.26,
+          "z": 17.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 116,
+        "basis": "recorded",
+        "time_s": 430.411043,
+        "xyz_mm": {
+          "x": 182.38,
+          "y": 74.26,
+          "z": 17.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 118,
+        "basis": "recorded",
+        "time_s": 432.214563,
+        "xyz_mm": {
+          "x": 191.38,
+          "y": 74.26,
+          "z": 17.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 120,
+        "basis": "recorded",
+        "time_s": 434.209644,
+        "xyz_mm": {
+          "x": 200.38,
+          "y": 74.26,
+          "z": 17.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 122,
+        "basis": "recorded",
+        "time_s": 436.042298,
+        "xyz_mm": {
+          "x": 209.38,
+          "y": 74.26,
+          "z": 17.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 124,
+        "basis": "recorded",
+        "time_s": 437.825219,
+        "xyz_mm": {
+          "x": 218.38,
+          "y": 74.26,
+          "z": 17.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 126,
+        "basis": "recorded",
+        "time_s": 439.72319,
+        "xyz_mm": {
+          "x": 227.38,
+          "y": 74.26,
+          "z": 17.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 128,
+        "basis": "recorded",
+        "time_s": 441.517927,
+        "xyz_mm": {
+          "x": 236.38,
+          "y": 74.26,
+          "z": 17.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 130,
+        "basis": "recorded",
+        "time_s": 443.347475,
+        "xyz_mm": {
+          "x": 245.38,
+          "y": 74.26,
+          "z": 17.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 132,
+        "basis": "nominal_tip_handling",
+        "time_s": 455.762251,
+        "xyz_mm": {
+          "x": 329.5,
+          "y": 345.5,
+          "z": 161.1
+        },
+        "has_tip": false
+      },
+      {
+        "index": 134,
+        "basis": "nominal_tip_handling",
+        "time_s": 462.20089,
+        "xyz_mm": {
+          "x": 68.38,
+          "y": 345.74,
+          "z": 5.39
+        },
+        "has_tip": true
+      },
+      {
+        "index": 135,
+        "basis": "recorded",
+        "time_s": 498.1184,
+        "xyz_mm": {
+          "x": 227.38,
+          "y": 74.26,
+          "z": 12.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 136,
+        "basis": "nominal_tip_handling",
+        "time_s": 510.727535,
+        "xyz_mm": {
+          "x": 329.5,
+          "y": 345.5,
+          "z": 161.1
+        },
+        "has_tip": false
+      },
+      {
+        "index": 138,
+        "basis": "nominal_tip_handling",
+        "time_s": 517.133313,
+        "xyz_mm": {
+          "x": 77.38,
+          "y": 345.74,
+          "z": 5.39
+        },
+        "has_tip": true
+      },
+      {
+        "index": 139,
+        "basis": "recorded",
+        "time_s": 553.012794,
+        "xyz_mm": {
+          "x": 236.38,
+          "y": 74.26,
+          "z": 12.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 140,
+        "basis": "nominal_tip_handling",
+        "time_s": 565.612904,
+        "xyz_mm": {
+          "x": 329.5,
+          "y": 345.5,
+          "z": 161.1
+        },
+        "has_tip": false
+      },
+      {
+        "index": 142,
+        "basis": "nominal_tip_handling",
+        "time_s": 571.910815,
+        "xyz_mm": {
+          "x": 86.38,
+          "y": 345.74,
+          "z": 5.39
+        },
+        "has_tip": true
+      },
+      {
+        "index": 143,
+        "basis": "recorded",
+        "time_s": 607.880827,
+        "xyz_mm": {
+          "x": 245.38,
+          "y": 74.26,
+          "z": 12.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 144,
+        "basis": "nominal_tip_handling",
+        "time_s": 620.731069,
+        "xyz_mm": {
+          "x": 329.5,
+          "y": 345.5,
+          "z": 161.1
+        },
+        "has_tip": false
+      },
+      {
+        "index": 146,
+        "basis": "nominal_tip_handling",
+        "time_s": 627.082768,
+        "xyz_mm": {
+          "x": 95.38,
+          "y": 345.74,
+          "z": 5.39
+        },
+        "has_tip": true
+      },
+      {
+        "index": 147,
+        "basis": "recorded",
+        "time_s": 636.728945,
+        "xyz_mm": {
+          "x": 173.9,
+          "y": 164.3,
+          "z": 3.1
+        },
+        "has_tip": true
+      },
+      {
+        "index": 148,
+        "basis": "recorded",
+        "time_s": 642.67072,
+        "xyz_mm": {
+          "x": 200.9,
+          "y": 164.3,
+          "z": 14.1
+        },
+        "has_tip": true
+      },
+      {
+        "index": 149,
+        "basis": "recorded",
+        "time_s": 680.568902,
+        "xyz_mm": {
+          "x": 200.9,
+          "y": 164.3,
+          "z": 3.1
+        },
+        "has_tip": true
+      },
+      {
+        "index": 150,
+        "basis": "nominal_tip_handling",
+        "time_s": 692.87526,
+        "xyz_mm": {
+          "x": 329.5,
+          "y": 345.5,
+          "z": 161.1
+        },
+        "has_tip": false
+      },
+      {
+        "index": 152,
+        "basis": "nominal_tip_handling",
+        "time_s": 699.119217,
+        "xyz_mm": {
+          "x": 104.38,
+          "y": 345.74,
+          "z": 5.39
+        },
+        "has_tip": true
+      },
+      {
+        "index": 153,
+        "basis": "recorded",
+        "time_s": 703.077935,
+        "xyz_mm": {
+          "x": 200.9,
+          "y": 164.3,
+          "z": 3.1
+        },
+        "has_tip": true
+      },
+      {
+        "index": 154,
+        "basis": "recorded",
+        "time_s": 706.651794,
+        "xyz_mm": {
+          "x": 182.38,
+          "y": 74.26,
+          "z": 17.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 156,
+        "basis": "recorded",
+        "time_s": 740.618872,
+        "xyz_mm": {
+          "x": 182.38,
+          "y": 74.26,
+          "z": 12.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 158,
+        "basis": "nominal_tip_handling",
+        "time_s": 753.138573,
+        "xyz_mm": {
+          "x": 329.5,
+          "y": 345.5,
+          "z": 161.1
+        },
+        "has_tip": false
+      },
+      {
+        "index": 160,
+        "basis": "nominal_tip_handling",
+        "time_s": 759.51928,
+        "xyz_mm": {
+          "x": 113.38,
+          "y": 345.74,
+          "z": 5.39
+        },
+        "has_tip": true
+      },
+      {
+        "index": 161,
+        "basis": "recorded",
+        "time_s": 763.148712,
+        "xyz_mm": {
+          "x": 200.9,
+          "y": 164.3,
+          "z": 3.1
+        },
+        "has_tip": true
+      },
+      {
+        "index": 162,
+        "basis": "recorded",
+        "time_s": 766.472448,
+        "xyz_mm": {
+          "x": 146.38,
+          "y": 74.26,
+          "z": 17.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 164,
+        "basis": "recorded",
+        "time_s": 800.594319,
+        "xyz_mm": {
+          "x": 146.38,
+          "y": 74.26,
+          "z": 12.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 166,
+        "basis": "nominal_tip_handling",
+        "time_s": 813.093502,
+        "xyz_mm": {
+          "x": 329.5,
+          "y": 345.5,
+          "z": 161.1
+        },
+        "has_tip": false
+      },
+      {
+        "index": 168,
+        "basis": "nominal_tip_handling",
+        "time_s": 819.344676,
+        "xyz_mm": {
+          "x": 146.88,
+          "y": 345.74,
+          "z": 5.39
+        },
+        "has_tip": true
+      },
+      {
+        "index": 169,
+        "basis": "recorded",
+        "time_s": 823.645557,
+        "xyz_mm": {
+          "x": 200.9,
+          "y": 164.3,
+          "z": 3.1
+        },
+        "has_tip": true
+      },
+      {
+        "index": 170,
+        "basis": "recorded",
+        "time_s": 827.565375,
+        "xyz_mm": {
+          "x": 218.38,
+          "y": 74.26,
+          "z": 17.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 172,
+        "basis": "recorded",
+        "time_s": 861.528599,
+        "xyz_mm": {
+          "x": 218.38,
+          "y": 74.26,
+          "z": 12.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 174,
+        "basis": "nominal_tip_handling",
+        "time_s": 873.993262,
+        "xyz_mm": {
+          "x": 329.5,
+          "y": 345.5,
+          "z": 161.1
+        },
+        "has_tip": false
+      },
+      {
+        "index": 176,
+        "basis": "nominal_tip_handling",
+        "time_s": 880.312067,
+        "xyz_mm": {
+          "x": 155.88,
+          "y": 345.74,
+          "z": 5.39
+        },
+        "has_tip": true
+      },
+      {
+        "index": 177,
+        "basis": "recorded",
+        "time_s": 884.613572,
+        "xyz_mm": {
+          "x": 200.9,
+          "y": 164.3,
+          "z": 3.1
+        },
+        "has_tip": true
+      },
+      {
+        "index": 178,
+        "basis": "recorded",
+        "time_s": 888.442915,
+        "xyz_mm": {
+          "x": 164.38,
+          "y": 74.26,
+          "z": 17.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 180,
+        "basis": "recorded",
+        "time_s": 922.860324,
+        "xyz_mm": {
+          "x": 164.38,
+          "y": 74.26,
+          "z": 12.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 182,
+        "basis": "nominal_tip_handling",
+        "time_s": 935.462269,
+        "xyz_mm": {
+          "x": 329.5,
+          "y": 345.5,
+          "z": 161.1
+        },
+        "has_tip": false
+      },
+      {
+        "index": 184,
+        "basis": "nominal_tip_handling",
+        "time_s": 941.666271,
+        "xyz_mm": {
+          "x": 164.88,
+          "y": 345.74,
+          "z": 5.39
+        },
+        "has_tip": true
+      },
+      {
+        "index": 185,
+        "basis": "recorded",
+        "time_s": 945.466684,
+        "xyz_mm": {
+          "x": 200.9,
+          "y": 164.3,
+          "z": 3.1
+        },
+        "has_tip": true
+      },
+      {
+        "index": 186,
+        "basis": "recorded",
+        "time_s": 948.709202,
+        "xyz_mm": {
+          "x": 200.38,
+          "y": 74.26,
+          "z": 17.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 188,
+        "basis": "recorded",
+        "time_s": 982.848342,
+        "xyz_mm": {
+          "x": 200.38,
+          "y": 74.26,
+          "z": 12.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 190,
+        "basis": "nominal_tip_handling",
+        "time_s": 995.474423,
+        "xyz_mm": {
+          "x": 329.5,
+          "y": 345.5,
+          "z": 161.1
+        },
+        "has_tip": false
+      },
+      {
+        "index": 192,
+        "basis": "nominal_tip_handling",
+        "time_s": 1001.696282,
+        "xyz_mm": {
+          "x": 173.88,
+          "y": 345.74,
+          "z": 5.39
+        },
+        "has_tip": true
+      },
+      {
+        "index": 193,
+        "basis": "recorded",
+        "time_s": 1005.640878,
+        "xyz_mm": {
+          "x": 200.9,
+          "y": 164.3,
+          "z": 3.1
+        },
+        "has_tip": true
+      },
+      {
+        "index": 194,
+        "basis": "recorded",
+        "time_s": 1009.123943,
+        "xyz_mm": {
+          "x": 155.38,
+          "y": 74.26,
+          "z": 17.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 196,
+        "basis": "recorded",
+        "time_s": 1043.250725,
+        "xyz_mm": {
+          "x": 155.38,
+          "y": 74.26,
+          "z": 12.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 198,
+        "basis": "nominal_tip_handling",
+        "time_s": 1056.041011,
+        "xyz_mm": {
+          "x": 329.5,
+          "y": 345.5,
+          "z": 161.1
+        },
+        "has_tip": false
+      },
+      {
+        "index": 200,
+        "basis": "nominal_tip_handling",
+        "time_s": 1062.312602,
+        "xyz_mm": {
+          "x": 182.88,
+          "y": 345.74,
+          "z": 5.39
+        },
+        "has_tip": true
+      },
+      {
+        "index": 201,
+        "basis": "recorded",
+        "time_s": 1066.416787,
+        "xyz_mm": {
+          "x": 200.9,
+          "y": 164.3,
+          "z": 3.1
+        },
+        "has_tip": true
+      },
+      {
+        "index": 202,
+        "basis": "recorded",
+        "time_s": 1070.230713,
+        "xyz_mm": {
+          "x": 209.38,
+          "y": 74.26,
+          "z": 17.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 204,
+        "basis": "recorded",
+        "time_s": 1104.204665,
+        "xyz_mm": {
+          "x": 209.38,
+          "y": 74.26,
+          "z": 12.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 206,
+        "basis": "nominal_tip_handling",
+        "time_s": 1117.098129,
+        "xyz_mm": {
+          "x": 329.5,
+          "y": 345.5,
+          "z": 161.1
+        },
+        "has_tip": false
+      },
+      {
+        "index": 208,
+        "basis": "nominal_tip_handling",
+        "time_s": 1123.37533,
+        "xyz_mm": {
+          "x": 191.88,
+          "y": 345.74,
+          "z": 5.39
+        },
+        "has_tip": true
+      },
+      {
+        "index": 209,
+        "basis": "recorded",
+        "time_s": 1127.135387,
+        "xyz_mm": {
+          "x": 200.9,
+          "y": 164.3,
+          "z": 3.1
+        },
+        "has_tip": true
+      },
+      {
+        "index": 210,
+        "basis": "recorded",
+        "time_s": 1130.558863,
+        "xyz_mm": {
+          "x": 173.38,
+          "y": 74.26,
+          "z": 17.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 212,
+        "basis": "recorded",
+        "time_s": 1164.516952,
+        "xyz_mm": {
+          "x": 173.38,
+          "y": 74.26,
+          "z": 12.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 214,
+        "basis": "nominal_tip_handling",
+        "time_s": 1177.006742,
+        "xyz_mm": {
+          "x": 329.5,
+          "y": 345.5,
+          "z": 161.1
+        },
+        "has_tip": false
+      },
+      {
+        "index": 216,
+        "basis": "nominal_tip_handling",
+        "time_s": 1183.318517,
+        "xyz_mm": {
+          "x": 200.88,
+          "y": 345.74,
+          "z": 5.39
+        },
+        "has_tip": true
+      },
+      {
+        "index": 217,
+        "basis": "recorded",
+        "time_s": 1187.589843,
+        "xyz_mm": {
+          "x": 200.9,
+          "y": 164.3,
+          "z": 3.1
+        },
+        "has_tip": true
+      },
+      {
+        "index": 218,
+        "basis": "recorded",
+        "time_s": 1191.287212,
+        "xyz_mm": {
+          "x": 191.38,
+          "y": 74.26,
+          "z": 17.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 220,
+        "basis": "recorded",
+        "time_s": 1225.248338,
+        "xyz_mm": {
+          "x": 191.38,
+          "y": 74.26,
+          "z": 12.4
+        },
+        "has_tip": true
+      },
+      {
+        "index": 222,
+        "basis": "nominal_tip_handling",
+        "time_s": 1237.931147,
+        "xyz_mm": {
+          "x": 329.5,
+          "y": 345.5,
+          "z": 161.1
+        },
+        "has_tip": false
+      }
+    ],
+    "volume_conservation_passed": true
+  }
+}

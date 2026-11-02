@@ -1,4 +1,3 @@
-import {pathToFileURL} from 'node:url';
 import {resolve} from 'node:path';
 import {mkdirSync} from 'node:fs';
 mkdirSync('artifacts',{recursive:true});
@@ -9,10 +8,10 @@ const data=JSON.parse(fs.readFileSync('source/assets/fluorescence-560.json','utf
 const browser=await chromium.launch({executablePath:'/usr/bin/google-chrome',headless:true,args:['--no-sandbox']});
 try{
  const page=await browser.newPage({viewport:{width:1440,height:1000}});const external=[],errors=[];
- page.on('pageerror',e=>errors.push(e.message));await page.route(/^https?:/,r=>{external.push(r.request().url());return r.abort();});
+ page.on('pageerror',e=>errors.push(e.message));await page.route(/^https?:/,r=>{if(new URL(r.request().url()).origin===new URL(process.env.BASE_URL||'http://localhost:8877/').origin)return r.continue();external.push(r.request().url());return r.abort();});
  // The 3D viewers are checked separately; keep this check focused on the results.
  await page.route('**/xarm-workflow.html',r=>r.abort());
- await page.goto(pathToFileURL(resolve('index.html')).href);
+ await page.goto((process.env.BASE_URL||'http://localhost:8877/'));
  await page.locator('#results').scrollIntoViewIfNeeded();
  assert.equal(await page.locator('#fl-map .fl-well').count(),96);
  assert.equal(await page.locator('#fl-timepoint option').count(),10);
