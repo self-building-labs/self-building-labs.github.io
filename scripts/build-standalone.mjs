@@ -25,4 +25,12 @@ for(const [kind,source,destination,entry]of [['main','index','index','source/app
  const script=Object.entries(bundled.metafile.outputs).find(([,v])=>v.entryPoint===entry)[0];
  html=html.replace('</body>',`<script type="module" src="${script}"></script></body>`);await fs.writeFile(path.join(root,destination+'.html'),html);console.log(destination+'.html',Buffer.byteLength(html),'bytes');
 }
+// Version the iframe documents as well as their assets. Otherwise a browser can
+// reuse an older viewer HTML document that still points at old model bundles.
+let mainHtml=(await read('index.html')).toString();
+for(const viewer of ['hplc-workflow.html','xarm-workflow.html']){
+ const version=createHash('sha256').update(await read(viewer)).digest('hex').slice(0,12);
+ mainHtml=mainHtml.replace(`data-src="${viewer}"`,`data-src="${viewer}?v=${version}"`);
+}
+await fs.writeFile(path.join(root,'index.html'),mainHtml);
 await fs.writeFile(path.join(out,'manifest.json'),JSON.stringify(manifest,null,2));

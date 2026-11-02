@@ -1,3 +1,4 @@
+import {createHash} from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
 import {execFileSync} from 'node:child_process';
@@ -9,6 +10,11 @@ for(const name of new Set(files)){
  const file=path.join(root,name);if(!fs.existsSync(file)||!fs.statSync(file).isFile())continue;
  const bytes=fs.statSync(file).size;total+=bytes;if(bytes>max.bytes)max={name,bytes};
  assert.ok(bytes<=100*1024*1024,`${name} exceeds GitHub's 100 MiB file limit`);
+}
+const mainHtml=fs.readFileSync(path.join(root,'index.html'),'utf8');
+for(const viewer of ['hplc-workflow.html','xarm-workflow.html']){
+ const version=createHash('sha256').update(fs.readFileSync(path.join(root,viewer))).digest('hex').slice(0,12);
+ assert.ok(mainHtml.includes(`data-src="${viewer}?v=${version}"`),`${viewer}: embedded viewer must use its current content version`);
 }
 let references=0;
 for(const name of ['index.html','xarm-workflow.html','hplc-workflow.html']){
